@@ -28,5 +28,22 @@ const searchCategory = [
   "Electric",
   "Fashion",
 ];
+const languages = [
+  { name: "English", nativeName: "English", code: "en" },
+  { name: "Spanish", nativeName: "Español", code: "es" },
+  { name: "French", nativeName: "Français", code: "fr" },
+  { name: "German", nativeName: "Deutsch", code: "de" },
+  { name: "Chinese", nativeName: "中文", code: "zh" },
+  { name: "Japanese", nativeName: "日本語", code: "ja" },
+  { name: "Korean", nativeName: "한국어", code: "ko" },
+  { name: "Arabic", nativeName: "العربية", code: "ar" },
+  { name: "Portuguese", nativeName: "Português", code: "pt" },
+  { name: "Russian", nativeName: "Русский", code: "ru" },
+  { name: "Italian", nativeName: "Italiano", code: "it" },
+  { name: "Dutch", nativeName: "Nederlands", code: "nl" },
+  { name: "Swedish", nativeName: "Svenska", code: "sv" },
+  { name: "Turkish", nativeName: "Türkçe", code: "tr" },
+  { name: "Hindi", nativeName: "हिन्दी", code: "hi" },
+];
 
-export { menuItems, searchCategory };
+export { menuItems, searchCategory, languages };
