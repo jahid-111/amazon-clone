@@ -18,5 +18,15 @@ const menuItems = [
   "International Brand Pavilion",
   "Help",
 ];
+const searchCategory = [
+  "All",
+  "Mobile",
+  "Headphone",
+  "Laptop",
+  "Kitchen",
+  "Mechanical",
+  "Electric",
+  "Fashion",
+];
 
-export { menuItems };
+export { menuItems, searchCategory };
