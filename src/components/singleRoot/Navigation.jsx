@@ -59,9 +59,9 @@ export default function Navigation() {
       ></div>
 
       <div
-        className={`fixed inset-y-0 left-0 w-[27rem] z-20 transition-transform duration-700 ${
+        className={`fixed inset-y-0 left-0 z-20 transition-transform duration-500 ${
           openSideNav
-            ? "transform translate-x-0"
+            ? "transform translate-x-0 "
             : "transform -translate-x-full"
         }`}
       >

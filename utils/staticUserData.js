@@ -46,4 +46,30 @@ const languages = [
   { name: "Hindi", nativeName: "हिन्दी", code: "hi" },
 ];
 
-export { menuItems, searchCategory, languages };
+const trendingSideBar = ["Beset Seller", "New Releases", "Movie & Shakers"];
+const digitalContents = ["Beset Seller", "New Releases", "Movie & Shakers"];
+const shopByCategory = [
+  "Beset Seller",
+  "New Releases",
+  "Movie & Shakers",
+  "Beset Seller",
+  "New Releases",
+  "Movie & Shakers",
+  "Beset Seller",
+  "New Releases",
+  "Movie & Shakers",
+  "Beset Seller",
+  "New Releases",
+  "Movie & Shakers",
+];
+const programsFeatures = ["Beset Seller", "New Releases", "Movie & Shakers"];
+
+export {
+  menuItems,
+  searchCategory,
+  languages,
+  trendingSideBar,
+  digitalContents,
+  shopByCategory,
+  programsFeatures,
+};
