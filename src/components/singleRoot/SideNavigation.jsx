@@ -30,12 +30,12 @@ export default function SideNavigation({ onClose }) {
         </section>
 
         {/* ========== CLOSE SIDEBAR BUTTON */}
-        <div className="p-1">
+        <div className=" mt-1">
           <button
             onClick={() => onClose(false)}
-            className=" hover:border-gray-600 p-2 text-white hover:text-red-400 mt-1 border rounded-sm border-gray-600"
+            className=" hover:border-gray-600 p-1 text-white hover:text-red-400 border rounded-sm border-gray-600"
           >
-            <HiOutlineXMark className="h-8 w-8" />
+            <HiOutlineXMark className="h-7 w-7" />
           </button>
         </div>
       </div>

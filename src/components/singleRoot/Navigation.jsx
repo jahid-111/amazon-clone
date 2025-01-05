@@ -10,6 +10,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleResize = () => {
+      const main = document.getElementById("main");
       const breakpoints = [1435, 1395, 1210, 1175, 1065, 985, 940];
       const newFilteredMenuItems = breakpoints.reduce((acc, bp, index) => {
         if (window.matchMedia(`(max-width: ${bp}px)`).matches) {
@@ -17,6 +18,7 @@ export default function Navigation() {
         }
         return acc;
       }, menuItems);
+      console.log(main);
 
       setFilteredMenuItems(newFilteredMenuItems);
     };
@@ -52,7 +54,7 @@ export default function Navigation() {
       <div
         className={`fixed inset-0 z-10 transition-opacity duration-300 ${
           openSideNav
-            ? "bg-black bg-opacity-80 visible opacity-100"
+            ? "bg-black bg-opacity-80 visible opacity-100 z-0"
             : "opacity-0 invisible"
         }`}
         onClick={() => setOpenSideNav(false)}

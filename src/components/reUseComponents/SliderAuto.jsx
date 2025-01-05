@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import imageOne from "../../../public/images/sliderImage/slider_one.png";
-import imageTwo from "../../../public/images/sliderImage/slider_two.png";
-import imageThree from "../../../public/images/sliderImage/slider_three.png";
-import imageFour from "../../../public/images/sliderImage/slider_four.png";
+import imageOne from "/images/sliderImage/slider_one.png";
+import imageTwo from "/images/sliderImage/slider_two.png";
+import imageThree from "/images/sliderImage/slider_three.png";
+import imageFour from "/images/sliderImage/slider_four.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export default function SliderAuto() {
@@ -55,7 +55,7 @@ export default function SliderAuto() {
         {/* Left Arrow */}
         <button
           onClick={handlePrev}
-          className="absolute border-gray-400 border py-20 px-5 top-36 left-4 transform -translate-y-1/2 text-white rounded-md opacity-75 hover:opacity-100 transition"
+          className="absolute border-gray-400 border py-28 px-5 top-36 left-0 transform -translate-y-1/2 text-white rounded-r-md opacity-75 hover:opacity-100 transition"
         >
           <FaChevronLeft className="h-10 w-5" />
         </button>
@@ -63,7 +63,7 @@ export default function SliderAuto() {
         {/* Right Arrow */}
         <button
           onClick={handleNext}
-          className="absolute border-gray-400 border py-20 px-5 top-36 right-4 transform -translate-y-1/2 text-white rounded-md opacity-75 hover:opacity-100 transition"
+          className="absolute border-gray-400 border py-28 px-5 top-36 right-0 transform -translate-y-1/2 text-white rounded-s-md opacity-75 hover:opacity-100 transition"
         >
           <FaChevronRight className="h-10 w-5" />
         </button>
