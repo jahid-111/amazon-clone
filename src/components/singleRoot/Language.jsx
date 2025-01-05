@@ -3,8 +3,8 @@ import { languages } from "../../../utils/staticUserData";
 
 export default function Language() {
   return (
-    <div className=" h-full w-[7%] flex justify-center items-center p-2 ">
-      <button className=" flex justify-center items-center border rounded-sm border-transparent hover:border-gray-400 transition-all duration-300">
+    <div className=" h-full flex justify-center items-center p-2">
+      <button className=" flex justify-center items-center transition-all duration-300">
         <LiaFlagUsaSolid className="text-gray-300" />
         <select
           id="All"

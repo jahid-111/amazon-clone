@@ -3,31 +3,11 @@ import { menuItems } from "../../../utils/staticUserData";
 import { Link } from "react-router-dom";
 import { VscThreeBars } from "react-icons/vsc";
 import SideNavigation from "./SideNavigation";
+import { useFilteredNavItems } from "../../hooks/useFilteredNavItem";
 
 export default function Navigation() {
-  const [filteredMenuItems, setFilteredMenuItems] = useState(menuItems);
+  const filteredMenuItems = useFilteredNavItems(menuItems);
   const [openSideNav, setOpenSideNav] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const main = document.getElementById("main");
-      const breakpoints = [1435, 1395, 1210, 1175, 1065, 985, 940];
-      const newFilteredMenuItems = breakpoints.reduce((acc, bp, index) => {
-        if (window.matchMedia(`(max-width: ${bp}px)`).matches) {
-          return menuItems.slice(0, -(index + 1));
-        }
-        return acc;
-      }, menuItems);
-      console.log(main);
-
-      setFilteredMenuItems(newFilteredMenuItems);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div>

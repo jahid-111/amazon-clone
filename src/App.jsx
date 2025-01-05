@@ -7,7 +7,7 @@ import useScrollToVisible from "./hooks/useScrollToVisible";
 
 function App() {
   const { isVisible } = useScrollToVisible();
-  // console.log(isVisible);
+  console.log(isVisible);
   return (
     <section className="">
       {/* Fixed Header */}
@@ -19,7 +19,7 @@ function App() {
           className={`transition-all duration-500 ${
             isVisible
               ? "opacity-100 translate-y-0 delay-300"
-              : "opacity-0 translate-y-[-20px] delay-0"
+              : "opacity-0 translate-y-[-20px] delay-0" // No delay when hidden
           }`}
         >
           <Navigation />

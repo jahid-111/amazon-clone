@@ -6,14 +6,14 @@ import useSearchStyle from "../../hooks/useSearchStyle";
 export default function SearchBar() {
   const { inputRef, searchRef } = useSearchStyle(); //Clean Component to use Hook
   return (
-    <div className="flex-grow h-full flex justify-center items-center">
+    <div className="flex-grow h-full  flex justify-center items-center">
       <div
         ref={searchRef}
         className="flex w-full max-w-4xl bg-white rounded-lg shadow-lg border-2"
       >
         <select
           id="All"
-          className="p-1 border-r bg-white w-auto text-gray-600 hover:text-gray-950 rounded-s-sm"
+          className="p-1 border-r bg-white w-auto cursor-pointer hover:bg-gray-200 text-gray-600 hover:text-gray-950 rounded-s-sm"
         >
           {searchCategory.map((item) => (
             <option className="bg-green-500" key={item} value={item}>
