@@ -2,6 +2,7 @@ import "./App.css";
 
 import Navigation from "./components/singleRoot/Navigation";
 import Header from "./components/singleRoot/Header";
+import SliderAuto from "./components/reUseComponents/SliderAuto";
 
 function App() {
   return (
@@ -10,32 +11,9 @@ function App() {
       <Navigation />
 
       <main id="main">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          aperiam id provident deserunt perferendis placeat. Ab aspernatur
-          accusantium magni quas quia vel, ad error repellendus, aperiam nobis
-          omnis asperiores ratione.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          aperiam id provident deserunt perferendis placeat. Ab aspernatur
-          accusantium magni quas quia vel, ad error repellendus, aperiam nobis
-          omnis asperiores ratione.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          aperiam id provident deserunt perferendis placeat. Ab aspernatur
-          accusantium magni quas quia vel, ad error repellendus, aperiam nobis
-          omnis asperiores ratione.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          aperiam id provident deserunt perferendis placeat. Ab aspernatur
-          accusantium magni quas quia vel, ad error repellendus, aperiam nobis
-          omnis asperiores ratione.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          aperiam id provident deserunt perferendis placeat. Ab aspernatur
-          accusantium magni quas quia vel, ad error repellendus, aperiam nobis
-          omnis asperiores ratione.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          aperiam id provident deserunt perferendis placeat. Ab aspernatur
-          accusantium magni quas quia vel, ad error repellendus, aperiam nobis
-          omnis asperiores ratione.
-        </p>
+        <div className=" mx-24">
+          <SliderAuto />
+        </div>
       </main>
     </section>
   );
