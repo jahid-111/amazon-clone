@@ -9,7 +9,7 @@ function App() {
   const { isVisible } = useScrollToVisible();
   console.log(isVisible);
   return (
-    <section className="">
+    <section className=" relative">
       {/* Fixed Header */}
       <div className="fixed top-0 w-full z-50">
         <Header />
@@ -26,7 +26,7 @@ function App() {
         </div>
       </div>
 
-      <main id="main" className="pt-[4rem]">
+      <main id="main" className="pt-[4rem] ">
         <div className="mx-24 mt-8">
           <SliderAuto />
         </div>
