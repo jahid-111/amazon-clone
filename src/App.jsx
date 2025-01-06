@@ -7,9 +7,9 @@ import useScrollToVisible from "./hooks/useScrollToVisible";
 
 function App() {
   const { isVisible } = useScrollToVisible();
-  console.log(isVisible);
+  // console.log(isVisible);
   return (
-    <section className=" relative">
+    <section className=" ">
       {/* Fixed Header */}
       <div className="fixed top-0 w-full z-50">
         <Header />
@@ -26,12 +26,13 @@ function App() {
         </div>
       </div>
 
-      <main id="main" className="pt-[4rem] ">
-        <div className="mx-24 mt-8">
+      <main id="main" className="pt-[4rem] relative">
+        {/* HERO SECTION */}
+        <div className=" mx-0 xl:mx-24 mt-8">
           <SliderAuto />
         </div>
         {/* Content Section */}
-        <section className="absolute top-[24rem] mx-28 bg-green-400">
+        <section className="absolute top-[20rem] mx-0 xl:mx-28 bg-green-400">
           {/* Your content */}
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
