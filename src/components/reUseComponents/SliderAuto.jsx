@@ -33,7 +33,7 @@ export default function SliderAuto() {
   };
 
   return (
-    <div className="flex flex-col  items-center justify-center w-full h-full space-y-4">
+    <div className="flex flex-col items-center justify-center w-full h-full space-y-4">
       {/* Slider */}
       <div className="relative w-full h-[40rem] overflow-hidden">
         <div
