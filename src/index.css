@@ -5,7 +5,7 @@
 
   color-scheme: #f2f2f2;
   color: rgba(35, 33, 33, 0.87);
-  background-color: #fdf9f9;
+  background-color: #ddd2d2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,3 +20,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

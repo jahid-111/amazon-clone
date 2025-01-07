@@ -5,6 +5,7 @@ import Header from "./components/singleRoot/Header";
 import SliderAuto from "./components/reUseComponents/SliderAuto";
 import useScrollToVisible from "./hooks/useScrollToVisible";
 import SellPrimaryCard from "./components/cards/SellPrimaryCard";
+import ScrollHrCard from "./components/cards/ScrollHrCard";
 
 function App() {
   const { isVisible } = useScrollToVisible();
@@ -26,21 +27,31 @@ function App() {
           <Navigation />
         </div>
       </div>
-
-      <main
-        id="main"
-        className="pt-[4rem] relative flex justify-center items-start min-w-[920px]"
-      >
+      <main id="main" className="relative mt-24">
         {/* HERO SECTION */}
-        <div className="mx-0  xl:mx-24 mt-8">
+        <div className=" h-[40rem] xl:mx-24 ">
           <SliderAuto />
         </div>
         {/* Content Section */}
-        <section className="absolute top-80 mx-auto  min-w-[920px]">
-          <div className=" grid grid-cols-3 2xl:grid-cols-4 gap-7 ">
+        <section className=" absolute flex flex-col justify-around items-center top-64 w-full px-2">
+          <div className=" grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-7 xl:mx-28">
             {[...Array(8)].map((c, card) => (
               <SellPrimaryCard key={card} />
             ))}
+          </div>
+
+          {/* HR Scroll Products */}
+          <div className=" w-full xl:w-10/12 mx-0 lg:mx-24 px-2 lg:px-0 ">
+            <h3 className="text-2xl font-semibold my-2">
+              Top picks on children books from SAR 6
+            </h3>
+            <div className="border p-1 border-red-700 overflow-x-auto my-5 ">
+              <div className="flex justify-start items-center gap-3 w-max">
+                {[...Array(16)].map((_, index) => (
+                  <ScrollHrCard key={index} />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>

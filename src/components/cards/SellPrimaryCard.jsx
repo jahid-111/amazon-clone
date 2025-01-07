@@ -1,6 +1,6 @@
 export default function SellPrimaryCard() {
   return (
-    <div className=" w-auto max-w-[21rem] h-[26rem] p-2 relative bg-white shadow-md rounded-sm">
+    <div className="w-auto max-w-[21rem] h-[26rem] p-2 relative bg-white shadow-md rounded-sm">
       {/* Title */}
       <h3 className="text-xl font-bold mb-4">
         Shop Amazon Private Brands starting from SAR 10
