@@ -8,8 +8,8 @@ const HorizontalScroll = ({ children }) => {
     const container = scrollContainerRef.current;
 
     if (container) {
-      const scrollAmount = 600; // Adjust scroll speed (higher = faster)
-      const scrollSpeed = 20; // Speed of the scroll transition (lower = faster)
+      const scrollAmount = 400; // Adjust scroll speed (higher = faster)
+      const scrollSpeed = 250; // Speed of the scroll transition (lower = faster)
 
       const scroll = (start, end) => {
         const distance = end - start;

@@ -8,6 +8,7 @@ import SellPrimaryCard from "./components/cards/SellPrimaryCard";
 import ScrollHrCard from "./components/cards/ScrollHrCard";
 import HorizontalScroll from "./components/reUseComponents/HorizontalScroll";
 import { Link } from "react-router-dom";
+import DetailsPriceCard from "./components/cards/DetailsPriceCard";
 
 function App() {
   const { isVisible } = useScrollToVisible();
@@ -162,82 +163,40 @@ function App() {
               </HorizontalScroll>
             </div>
 
-            {/* LAST ELEMENT */}
-
-            <div className="absolute -left-16 -right-16 bg-white py-4 -mx-2 mt-10">
-              <hr className=" border-gray-500 border" />
-              {/* Centered Content */}
-              <div className="w-full px-4 mx-auto">
-                {/* Horizontal Scroll Section */}
-                <div className=" bg-red-200 py-32">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores minus quam impedit rem provident, est adipisci placeat
-                  aspernatur! Quidem, quam! Nam excepturi voluptatibus, eum
-                  consequuntur deserunt dolorem blanditiis ab nobis. Sit tempora
-                  perferendis eaque corporis quia cupiditate temporibus tenetur
-                  odit voluptatem repellat nostrum enim quaerat commodi
-                  aspernatur cumque dicta labore eveniet illum non, consequatur
-                  fugiat! Deserunt officiis accusantium facere tenetur, error
-                  non dolores quaerat possimus aut voluptatum tempora iure
-                  tempore minima cumque cum fugiat hic nesciunt aspernatur
-                  labore! Quasi, reiciendis ducimus! Quae similique magni sit
-                  porro fugit vitae aliquid fugiat. Dignissimos sapiente facere
-                  earum vero blanditiis ad. Culpa, veniam ratione eius, labore
-                  beatae quis ab accusamus odio, animi molestiae quasi
-                  recusandae corrupti eaque quas illum assumenda fugiat fuga
-                  cupiditate laudantium voluptate nam! Harum accusamus ab quos
-                  odio quae mollitia, ducimus aut vel dignissimos temporibus
-                  tempora voluptas suscipit. Ea soluta necessitatibus, quo
-                  praesentium, aliquam consectetur obcaecati, molestiae
-                  architecto recusandae ipsa repudiandae. Sint voluptates quasi
-                  nisi quis voluptas tempore alias eligendi neque eaque
-                  nesciunt, veniam delectus! Voluptatibus cumque alias iste
-                  amet. Molestias dolores, ipsa, repudiandae nobis pariatur quis
-                  alias nihil a earum quasi harum eos voluptatibus praesentium
-                  illo veniam quas expedita voluptas ad, minima repellat quaerat
-                  deserunt rem tenetur ea! Illo sit iusto ea officiis non.
-                  Soluta dicta optio natus voluptatum mollitia architecto fuga
-                  aliquid eius consequatur reiciendis? Asperiores, a, inventore
-                  eaque enim quos doloremque fugiat, non error et suscipit
-                  aliquam. Possimus nostrum quisquam nulla non blanditiis labore
-                  veritatis neque veniam odit unde excepturi recusandae rerum
-                  nisi velit illum, similique provident pariatur ipsa ullam
-                  vitae esse? Molestiae nisi quidem enim qui? Earum id saepe
-                  expedita illo esse soluta. Aliquid aliquam, facere voluptatum
-                  perspiciatis commodi error ipsum quasi amet rerum distinctio
-                  hic debitis corporis eos accusamus autem, minima dolorum.
-                  Quibusdam itaque dolorum quaerat. Dolorum aperiam maxime
-                  doloremque numquam itaque veritatis temporibus a dolores.
-                </div>
-                <hr className=" border-gray-500 border   w-11/12 mx-auto" />
-                <div className=" bg-green-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores minus quam impedit rem provident, est adipisci placeat
-                  aspernatur! Quidem, quam! Nam excepturi voluptatibus, eum
-                  consequunt recusandae corrupti eaque quas illum assumenda
-                  fugiat fuga cupiditate laudantium voluptate nam! Harum
-                  accusamus ab quos quaerat deserunt rem tenetur ea! Illo sit
-                  iusto ea officiis non. Soluta dicta optio natus voluptatum
-                  mollitia architecto fuga aliquid eius consequatur reiciendis?
-                  Asperiores, a, inventore eaque enim quos doloremque fugiat,
-                  non error et suscipit aliquam. Possimus nostrum quisquam nulla
-                  non blanditiis labore veritatis neque veniam odit unde
-                  excepturi recusandae rerum nisi velit illum, similique
-                  provident pariatur ipsa ullam vitae esse? Molestiae nisi
-                  quidem enim qui? Earum id saepe expedita illo esse soluta.
-                  Aliquid aliquam, facere voluptatum perspiciatis commodi error
-                  ipsum quasi amet rerum distinctio hic debitis corporis eos
-                  accusamus autem, minima dolorum. Quibusdam itaque dolorum
-                  quaerat. Dolorum aperiam maxime doloremque numquam itaque
-                  veritatis temporibus a dolores.
-                </div>
-                <hr className=" border-gray-500 border" />
-                <Link
-                  className=" bg-slate-700 text-gray-100 hover:bg-slate-600 font-semibold w-full  block text-center py-2"
-                  to={"#header"}
-                >
-                  Back to Top
-                </Link>
+            {/* LAST ELEMENT FULL SCROLL*/}
+            <div className="absolute left-0 right-0 xl:-left-16 xl:-right-16 bg-white py-8 -mx-2 mt-10">
+              <hr className="border-gray-500 py-4" />
+              {/* Horizontal Scroll Section */}
+              <div className=" mx-auto px-4">
+                <h6 className=" text-xl font-semibold ps-10">
+                  Inspired by your browsing history
+                </h6>
+                <HorizontalScroll>
+                  <section className="flex justify-between gap-3 overflow-x-auto py-8 px-8">
+                    {[...Array(16)].map((_, index) => (
+                      <DetailsPriceCard key={index} />
+                    ))}
+                  </section>
+                </HorizontalScroll>
+                <hr className="border-gray-500 w-11/12 mx-auto" />
+                {/* AUTH CONTENT*/}
+                <section className="py-4 px-4">
+                  <div className=" flex flex-col gap-2 justify-center items-center">
+                    <h4 className="text-2xl font-semibold text-gray-700">
+                      See personalized recommendations
+                    </h4>
+                    <button className=" bg-[#f7dc2e] py-1 px-28 rounded-full">
+                      <span className=" text-gray-600"> Signin</span>
+                    </button>
+                    <p className=" text-xs">
+                      <span className=" font-semibold"> New customer? </span>
+                      <Link to={"/"} className=" text-blue underline">
+                        Start here.
+                      </Link>
+                    </p>
+                  </div>
+                </section>
+                <hr className="border-gray-500" />
               </div>
             </div>
           </div>
