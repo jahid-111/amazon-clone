@@ -4,7 +4,7 @@ export default function ScrollHrCard({ imageClass }) {
       <div>
         <img
           className={imageClass}
-          src="../../../public/images/sliderImage/slider_four.png"
+          src="/images/sliderImage/slider_four.png"
           alt=""
         />
       </div>

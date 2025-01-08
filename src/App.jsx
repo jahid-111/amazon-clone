@@ -9,12 +9,18 @@ import ScrollHrCard from "./components/cards/ScrollHrCard";
 import HorizontalScroll from "./components/reUseComponents/HorizontalScroll";
 import { Link } from "react-router-dom";
 import DetailsPriceCard from "./components/cards/DetailsPriceCard";
+import {
+  aboutUs,
+  helpAndSupport,
+  makeMoneyWithUs,
+  shopWithUs,
+} from "../utils/staticUserData";
 
 function App() {
   const { isVisible } = useScrollToVisible();
 
   return (
-    <section>
+    <section className=" bg-yellow">
       {/* Fixed Header */}
       <div id="header" className="fixed top-0 w-full z-50">
         <Header />
@@ -38,9 +44,9 @@ function App() {
         </div>
 
         {/* Content Section */}
-        <section className="absolute flex flex-col items-center top-64 w-full px-2 ">
+        <div className="absolute flex flex-col items-center top-64 w-full px-2 ">
           {/* Common Parent Container for Consistent Width */}
-          <div className="w-full xl:max-w-screen-2xl p-4">
+          <section className="w-full xl:max-w-screen-2xl p-4">
             {/* Cards Grid */}
             <div className="w-full  mb-4">
               <div className="grid grid-cols-3 xl:grid-cols-4 gap-7 place-items-stretch">
@@ -163,9 +169,9 @@ function App() {
               </HorizontalScroll>
             </div>
 
-            {/* LAST ELEMENT FULL SCROLL*/}
-            <div className="absolute left-0 right-0 xl:-left-16 xl:-right-16 bg-white py-8 -mx-2 mt-10">
-              <hr className="border-gray-500 py-4" />
+            {/* LAST ELEMENT FULL SCROLL WITH FOOTER*/}
+            <section className="absolute left-0 right-0 xl:-left-16 xl:-right-16 bg-white -mx-2 mt-10">
+              <hr className="border-gray-500 py-8" />
               {/* Horizontal Scroll Section */}
               <div className=" mx-auto px-4">
                 <h6 className=" text-xl font-semibold ps-10">
@@ -196,11 +202,84 @@ function App() {
                     </p>
                   </div>
                 </section>
-                <hr className="border-gray-500" />
+                <hr className="border-gray-500 my-3" />
               </div>
-            </div>
-          </div>
-        </section>
+              {/* FOOTER */}
+              <footer className="bg-primary">
+                <button className=" block text-center w-full bg-slate-700 hover:bg-slate-600 text-gray-200 py-4 text-xs font-semibold">
+                  BACK TO TOP
+                </button>
+                <div className=" mx-auto text-gray-200 ">
+                  {/* TOP Footer */}
+                  <div className="flex gap-5 justify-center items-center">
+                    <div className=" min-h-80  w-72 my-10 p-7 ">
+                      <h5 className="font-bold text-white mb-2">
+                        Get To know Us
+                      </h5>
+                      <ul className="flex flex-col justify-center items-start">
+                        {aboutUs.map((link) => (
+                          <li key={link} className=" font-">
+                            <Link to={"/"} className=" hover:underline">
+                              {link}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className=" min-h-80  w-72 my-10 p-7">
+                      <h5 className="font-bold text-white mb-2">
+                        Shop With Us
+                      </h5>
+                      <ul className="flex flex-col justify-center items-start yes">
+                        {shopWithUs.map((link) => (
+                          <li key={link} className=" font-">
+                            <Link to={"/"} className=" hover:underline">
+                              {link}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className=" min-h-80  w-72 my-10 p-7">
+                      <h5 className="font-bold text-white mb-2">
+                        Make Money with Us
+                      </h5>
+                      <ul className="flex flex-col justify-center items-start yes">
+                        {makeMoneyWithUs.map((link) => (
+                          <li key={link} className=" font-">
+                            <Link to={"/"} className=" hover:underline">
+                              {link}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className=" min-h-80  w-72 my-10 p-7">
+                      <h5 className="font-bold text-white mb-2">
+                        Let Us Help You
+                      </h5>
+                      <ul className="flex flex-col justify-center items-start yes">
+                        {helpAndSupport.map((link) => (
+                          <li key={link} className=" font-">
+                            <Link to={"/"} className=" hover:underline">
+                              {link}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  {/* BOTTOM Footer */}
+                  <div className=" bg-gray-900">
+                    <p className=" text-center py-3">
+                      ©1996–2025, Amazon.com, Inc. or its affiliates
+                    </p>
+                  </div>
+                </div>
+              </footer>
+            </section>
+          </section>
+        </div>
       </main>
     </section>
   );

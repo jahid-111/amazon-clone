@@ -64,6 +64,32 @@ const shopByCategory = [
 ];
 const programsFeatures = ["Beset Seller", "New Releases", "Movie & Shakers"];
 
+// FOOTER
+const aboutUs = ["About Amazon", "Careers", "Amazon Science"];
+
+const shopWithUs = [
+  "Your Account",
+  "Your Orders",
+  "Your Addresses",
+  "Your Lists",
+];
+
+const makeMoneyWithUs = [
+  "Protect and build your brand",
+  "Sell on Amazon",
+  "Supply to Amazon",
+  "Fulfillment by Amazon",
+  "Advertise Your Products",
+];
+
+const helpAndSupport = [
+  "Help",
+  "Shipping & Delivery",
+  "Returns & Replacements",
+  "Recalls and Product Safety Alerts",
+  "Amazon App Download",
+];
+
 export {
   menuItems,
   searchCategory,
@@ -72,4 +98,8 @@ export {
   digitalContents,
   shopByCategory,
   programsFeatures,
+  aboutUs,
+  shopWithUs,
+  makeMoneyWithUs,
+  helpAndSupport,
 };
