@@ -1,74 +1,66 @@
 import { useState } from "react";
-import { IoIosStar, IoIosStarOutline } from "react-icons/io";
-import { ratingStar } from "../../../utils/staticUserData";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
-export default function RatingsCategory() {
-  const [selectedRating, setSelectedRating] = useState("all");
-
-  const handleChange = (value) => {
-    setSelectedRating(value);
-    console.log("Selected rating:", value);
-  };
-
-  const renderStars = (count, selectedRating) => {
-    const stars = [];
-    for (let i = 1; i <= 4; i++) {
-      stars.push(
-        <span key={i}>
-          {i <= count ? (
-            <IoIosStar
-              className={`h-5 w-5  border-primary${
-                selectedRating === "all"
-                  ? "bg-yellow-500"
-                  : i <= selectedRating
-                  ? "text-red-700"
-                  : "text-yellow-500"
-              }`}
-            />
-          ) : (
-            <IoIosStarOutline className="text-yellow-500 h-5 w-5" />
-          )}
-        </span>
-      );
-    }
-    return stars;
+/**
+ * A reusable RatingsRadio component that accepts custom ratings via props.
+ * @param {Array} reviews - An array of rating options to be displayed.
+ * @param {Function} onRatingChange - Callback function to handle rating changes.
+ */
+export default function RatingsRadio({ options, onRatingChange }) {
+  const [selectedRating, setSelectedRating] = useState("");
+  console.log(selectedRating);
+  console.log(selectedRating);
+  const handleChange = (event) => {
+    const review = event.target.value;
+    setSelectedRating(review);
+    onRatingChange && onRatingChange(review);
   };
 
   return (
     <div>
-      <h4 className="font-semibold mb-2">Customer Reviews</h4>
-      <ul className="list-none space-y-2 border">
-        <li>
-          <label className="flex items-center space-x-2">
+      <ul className="flex justify-start items-center">
+        <fieldset>
+          <legend>Customer Reviews</legend>
+          <div className="flex justify-start gap-1">
             <input
               type="radio"
-              name="rating"
-              value="all"
-              checked={selectedRating === "all"}
-              onChange={() => handleChange("all")}
-              className="cursor-pointer"
+              id="all"
+              name="review"
+              value="All"
+              checked={selectedRating === "All"}
+              onChange={handleChange}
             />
-            <span>All</span>
-          </label>
-        </li>
-        {ratingStar.map((option) => (
-          <li key={option.id} className=" border">
-            <label className="flex items-center space-x-2">
+            <label className="flex justify-start items-center" htmlFor="all">
+              All
+            </label>
+          </div>
+          {options?.map((review, index) => (
+            // console.log(review),
+            <div className="flex justify-start gap-1" key={index}>
               <input
                 type="radio"
-                name="rating"
-                value={option.id}
-                checked={selectedRating === option.id}
-                onChange={() => handleChange(option.id)}
-                className="cursor-pointer"
+                id={`review-${index}`}
+                name="review"
+                value={review.label}
+                checked={selectedRating === review.label}
+                onChange={handleChange}
               />
-              <div className="flex items-center space-x-1">
-                {renderStars(option.stars, selectedRating)}
-                <span>& up</span>
-              </div>
-            </label>
-          </li>
-        ))}
+              <label
+                className="flex justify-start items-center"
+                htmlFor={`review-${index}`}
+              >
+                {/* Decrease From Start */}
+                {[...Array(review.stars)].map((_, i) => (
+                  <FaStar className="text-yellow h-5 w-5" key={i} />
+                ))}
+                {/* I */}
+                {[...Array(5 - review.stars)].map((_, i) => (
+                  <FaRegStar className="text-yellow h-5 w-5" key={i} />
+                ))}
+              </label>
+            </div>
+          ))}
+        </fieldset>
       </ul>
     </div>
   );

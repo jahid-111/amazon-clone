@@ -120,7 +120,7 @@ const ratingStar = [
   { icon: IoIosStarOutline, id: 1 },
   { icon: IoIosStarOutline, id: 2 },
   { icon: IoIosStarOutline, id: 3 },
-  { icon: FaRegStarHalf, id: 4 },
+  { icon: FaRegStarHalf, id: 4},
 ];
 
 export {

@@ -1,13 +1,13 @@
-import RadioCategory from "../../components/reUseComponents/RadioCategory";
-import RatingsCategory from "../../components/reUseComponents/RatingsRadio";
+import { PricingFilter } from "../../components/radioSelect/PricinFilter";
+import { RatingFilter } from "../../components/radioSelect/RatingsFilter";
 
 export default function TodaysDeals() {
   return (
     <div>
       <div className="flex justify-center xl:w-11/12 mx-auto">
         <div className="border w-3/12 ">
-          <RadioCategory />
-          <RatingsCategory />
+          <RatingFilter />
+          {/* <PricingFilter/> */}
         </div>
         <div className="border w-9/12 ">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quos
