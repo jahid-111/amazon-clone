@@ -1,3 +1,6 @@
+import { FaRegStarHalf } from "react-icons/fa";
+import { IoIosStarOutline } from "react-icons/io";
+
 const menuItems = [
   "All",
   "Today's Deals",
@@ -89,6 +92,36 @@ const helpAndSupport = [
   "Recalls and Product Safety Alerts",
   "Amazon App Download",
 ];
+const amazonDepartments = [
+  "All",
+  "Amazon Devices & Accessories",
+  "Arts & Crafts",
+  "Automotive",
+  "Baby Products",
+  "Beauty",
+  "Books",
+  "DIY & Tools",
+  "Electronics",
+  "Fashion",
+  "Grocery",
+  "Health",
+  "Home",
+  "Industrial & Scientific",
+  "Musical Instruments",
+  "Office Products",
+  "Patio, Lawn & Garden",
+  "Pet Supplies",
+  "Sporting Goods",
+  "Toys",
+  "Video Games",
+];
+
+const ratingStar = [
+  { icon: IoIosStarOutline, id: 1 },
+  { icon: IoIosStarOutline, id: 2 },
+  { icon: IoIosStarOutline, id: 3 },
+  { icon: FaRegStarHalf, id: 4 },
+];
 
 export {
   menuItems,
@@ -102,4 +135,6 @@ export {
   shopWithUs,
   makeMoneyWithUs,
   helpAndSupport,
+  amazonDepartments,
+  ratingStar,
 };
