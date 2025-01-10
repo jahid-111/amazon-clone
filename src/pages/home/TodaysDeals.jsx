@@ -1,17 +1,19 @@
+import ProdDetailsDisplayCard from "../../components/cards/ProdDetailsDisplayCard";
 import InputRadio from "../../components/radioSelect/InputRadio";
 
 export default function TodaysDeals() {
   return (
     <div>
-      <div className="flex justify-center xl:w-11/12 mx-auto">
+      <div className="flex justify-center xl:w-10/12 mx-auto px-3">
         <div className="w-2/12 ">
           <InputRadio />
         </div>
         <div className="border w-10/12 ">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quos
-          distinctio magni eum harum quibusdam, accusantium quasi est ullam odio
-          repellendus laudantium culpa voluptatibus osfficia natus laboriosam et
-          nam labore!
+          <div className=" grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-3">
+            {[...Array(34)].map((item, i) => (
+              <ProdDetailsDisplayCard key={i} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
