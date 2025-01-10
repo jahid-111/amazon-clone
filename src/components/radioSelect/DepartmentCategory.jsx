@@ -11,32 +11,33 @@ export default function DepartmentCategory() {
   return (
     <div className="pb-2">
       <h3 className="text-[1rem] text-black font-bold">Department</h3>
-      <div className="flex flex-col justify-center  text-black rounded-md">
+      <div className="flex flex-col justify-center text-sm text-black font-medium">
         {/* "All" dept */}
 
         {/* Price Options */}
         {(showAll ? amazonDepartments : departmentInit).map((dept) => (
-          <label key={dept} className="flex items-center flex-shrink-0">
+          <label key={dept} className="flex items-center flex-shrink-0 ">
             <input
               type="radio"
               name="price"
               value={dept}
               checked={value === dept}
               onChange={onChange} // Handle the price selection
-              className="cursor-pointer"
+              className="cursor-pointer my-2"
             />
             <span className="ml-2 ">{dept}</span>
           </label>
         ))}
         <div className="">
           {value && (
-            <p className="text-gray-800">
-              Selected Price: <span className=" font-semibold">{value}</span>
+            <p className="">
+              Selected Price:{" "}
+              <span className=" font-semibold text-orange-500">{value}</span>
             </p>
           )}
         </div>
         <button
-          className=""
+          className=" hover:font-bold"
           onClick={() => setShowAll((prevShowAll) => !prevShowAll)}
         >
           {showAll ? (

@@ -13,7 +13,7 @@ export default function RatingsFilter() {
   // console.log(selectedRating);
 
   return (
-    <div className="pb-2">
+    <div className="pb-2 text-sm text-black font-medium">
       <h3 className="text-[1rem] text-black font-bold">Ratings</h3>
 
       {/* "All" Option */}
@@ -25,7 +25,7 @@ export default function RatingsFilter() {
           value="All"
           checked={selectedRating === "All"}
           onChange={handleChange}
-          className="cursor-pointer p-4 "
+          className="cursor-pointer my-2 "
         />
         <span className="ml-2 text-gray-700">All</span>
       </label>
@@ -40,7 +40,7 @@ export default function RatingsFilter() {
             value={review.label}
             checked={selectedRating === review.label}
             onChange={handleChange}
-            className="cursor-pointer"
+            className="cursor-pointer my-2"
           />
 
           {/* Stars and Label */}
@@ -50,12 +50,15 @@ export default function RatingsFilter() {
           >
             {/* Render Filled Stars */}
             {[...Array(review.stars)].map((_, i) => (
-              <FaStar className="text-yellow " key={`star-${index}-${i}`} />
+              <FaStar className="text-yellow me-1" key={`star-${index}-${i}`} />
             ))}
 
             {/* Render Empty Stars */}
             {[...Array(5 - review.stars)].map((_, i) => (
-              <FaRegStar className="text-yellow" key={`empty-${index}-${i}`} />
+              <FaRegStar
+                className="text-yellow me-1"
+                key={`empty-${index}-${i}`}
+              />
             ))}
 
             {/* Text Label */}

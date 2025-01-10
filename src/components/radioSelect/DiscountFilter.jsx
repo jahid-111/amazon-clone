@@ -14,7 +14,7 @@ export default function DiscountFilter() {
   return (
     <div className="pb-2">
       <h3 className="text-[1rem] text-black font-bold ">Price Filter</h3>
-      <div className="flex flex-col text-black rounded-md">
+      <div className="flex flex-col rounded-md text-sm text-black font-medium">
         {/* "All" Option */}
         <label className="flex items-center">
           <input
@@ -38,7 +38,7 @@ export default function DiscountFilter() {
               value={option.value}
               checked={value === option.value}
               onChange={onChange} // Handle the price selection
-              className="cursor-pointer"
+              className="cursor-pointer my-2"
             />
             <span className="ml-2 ">{option.label}</span>
           </label>
@@ -46,7 +46,8 @@ export default function DiscountFilter() {
         <div className=" h-5">
           {value && (
             <p className="text-gray-800">
-              Selected Discount : <span className="font-semibold">{value}</span>
+              Selected Discount :{" "}
+              <span className="font-semibold text-orange-500">{value}</span>
             </p>
           )}
         </div>

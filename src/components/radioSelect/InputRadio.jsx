@@ -6,13 +6,13 @@ import DiscountFilter from "./DiscountFilter";
 
 export default function InputRadio() {
   return (
-    <>
+    <div className="sticky top-1">
       <RadioForm>
         <DepartmentCategory />
         <RatingsFilter />
         <PriceFilter />
         <DiscountFilter />
       </RadioForm>
-    </>
+    </div>
   );
 }
