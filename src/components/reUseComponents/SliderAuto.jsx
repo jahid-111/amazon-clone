@@ -6,7 +6,7 @@ import imageThree from "/images/sliderImage/slider_three.png";
 import imageFour from "/images/sliderImage/slider_four.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function SliderAuto() {
+export default function SliderAuto({ customClass }) {
   const slides = [imageOne, imageTwo, imageThree, imageFour];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -47,7 +47,7 @@ export default function SliderAuto() {
               key={index}
               src={slide}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover shrink-0"
+              className={customClass}
             />
           ))}
         </div>

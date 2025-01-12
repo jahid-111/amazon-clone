@@ -38,7 +38,7 @@ export default function HomePage() {
         <main id="main" className="relative mt-24 xl:w-11/12 mx-auto">
           {/* HERO SECTION */}
           <div className="h-[40rem]">
-            <SliderAuto />
+            <SliderAuto customClass={"w-full h-full object-cover shrink-0"} />
           </div>
 
           {/* Content Section */}

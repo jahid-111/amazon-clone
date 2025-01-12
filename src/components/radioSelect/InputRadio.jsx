@@ -4,7 +4,7 @@ import RatingsFilter from "./RatingsFilter";
 import PriceFilter from "./PricingFilter";
 import DiscountFilter from "./DiscountFilter";
 
-export default function InputRadio() {
+export default function InputRadio({ type }) {
   return (
     <div className="sticky top-1">
       <RadioForm>
