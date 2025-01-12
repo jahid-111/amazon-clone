@@ -15,13 +15,13 @@ const slides = [imageOne, imageTwo, imageThree, imageFour];
 export default function Electronics() {
   return (
     <div>
-      <section className="flex justify-center mx-auto px-3">
-        <div className="w-[10%]">
+      <section className="flex justify-center mx-auto pe-2">
+        <div className="w-[12%]">
           <SideNav />
         </div>
 
         {/* SCROLL X */}
-        <div className="border w-[90%]">
+        <div className="border w-[88%]">
           <h3 className="text-3xl font-bold text-black">Electronics</h3>
           {/* Horizontal Scroll Section */}
           <div className="w-full bg-gray-100 px-2 mt-7">
