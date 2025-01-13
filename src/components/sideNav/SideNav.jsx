@@ -52,9 +52,11 @@ export default function SideNav() {
                       type="checkbox"
                       name={brand}
                       id={brand}
-                      className=" me-1"
+                      className=" me-1 cursor-pointer"
                     />
-                    <label htmlFor={brand}>{brand}</label>
+                    <label htmlFor={brand} className="cursor-pointer">
+                      {brand}
+                    </label>
                   </div>
                 ))}
               </div>
@@ -133,9 +135,11 @@ export default function SideNav() {
                     type="checkbox"
                     name={brand}
                     id={brand}
-                    className="me-1"
+                    className="me-1  cursor-pointer"
                   />
-                  <label htmlFor={brand}>{brand}</label>
+                  <label htmlFor={brand} className="cursor-pointer">
+                    {brand}
+                  </label>
                 </div>
               ))}
             </div>
