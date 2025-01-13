@@ -12,7 +12,9 @@ export default function ProductDetailsPage() {
   return (
     <div>
       <div className=" flex justify-between px-28">
+        {/* PHOTO INTRODUCE */}
         <div className=" border flex">
+          {/* MULTI PHOTO DISPLAY */}
           <div className=" w-40 border h-screen bg-green-300">
             <div>
               {[...Array(5)].map((_, i) => {
@@ -29,53 +31,83 @@ export default function ProductDetailsPage() {
                       style={{ backgroundColor: randomColor }}
                       className="h-12 w-12"
                     >
-                      c
+                      prod
                     </button>
                   </div>
                 );
               })}
             </div>
           </div>
-          <div>
+          {/* SELECTED PHOTO */}
+          <div className="p-16 ">
             <img
-              src="/electricPage/detailsProd/mobile/apple.png"
+              src="https://m.media-amazon.com/images/I/61VuVU94RnL._AC_SL1500_.jpg"
               alt=""
-              className=""
+              className=" "
             />
           </div>
         </div>
 
-        <div className=" border flex">
-          <div className=" bg-orange-100">
-            <div className=" border-b">
-              <h1>Apple iPhone 16 Pro Max (256 GB) - Black Titanium</h1>
-              <Link to={"/"}>Visit the Apple Store</Link>
-              <div className=" flex justify-around items-center">
-                <div className=" flex">
-                  {[...Array(5)].map((star) => (
-                    <FaStar key={star} />
+        {/* DETAILS AND ORDER CART */}
+        <div className="border flex p-2">
+          {/* HEADING */}
+          <div className="">
+            <div className="pb-2 border-b">
+              {/* Product Title */}
+              <h1 className="text-2xl font-bold">
+                Apple iPhone 16 Pro Max (256 GB) - Black Titanium
+              </h1>
+
+              {/* Brand Link */}
+              <p className="mt-2">
+                <Link to="/" className="text-blue hover:underline text-sm">
+                  Visit the Apple Store
+                </Link>
+              </p>
+
+              {/* Rating and Navigation */}
+              <div className="flex justify-between items-center mt-3">
+                {/* Rating Section */}
+                <div className="flex items-center gap-2">
+                  {[...Array(5)].map((_, index) => (
+                    <FaStar key={index} className="text-yellow-500" />
                   ))}
+                  <span className="text-sm text-gray-600">(4.5)</span>
                 </div>
-                <p>Ratting</p> |<Link to={"/"}> Search Page</Link>
+
+                {/* Separator and Search Link */}
+                <span className="text-gray-400 mx-2">|</span>
+                <Link
+                  to="/search"
+                  className="text-blue hover:underline text-sm"
+                >
+                  Search Page
+                </Link>
               </div>
-              <p>400+ bought in past month</p>
+
+              {/* Purchase Info */}
+              <p className="mt-3 text-sm text-gray-500">
+                400+ bought in past month
+              </p>
             </div>
 
-            <div className=" flex gap-4">
+            {/* PRICE */}
+
+            <div className=" flex gap-4 pt-2">
               <h4 className=" text-orange-500 text-2xl"> - 7%</h4>
               <h2 className=" text-4xl font-semibold">
                 <sup>SAR</sup> 5,299<sup>00</sup>
               </h2>
             </div>
 
-            <div>
-              <p className="">
+            <div className="pt-2">
+              <p className=" mt-2">
                 List Price: SAR5,699.00
                 <FaInfo className=" inline-block  border rounded-full text-xs" />
               </p>
               <p>All prices include VAT. Size: 256 GB</p>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 mt-2">
                 <button className=" border px-2  py-1 rounded-lg">1TB</button>
                 <button className=" border px-2  py-1 rounded-lg">256GB</button>
                 <button className=" border px-2  py-1 rounded-lg">512TB</button>
@@ -131,6 +163,7 @@ export default function ProductDetailsPage() {
             </div>
           </div>
 
+          {/* PRICING */}
           <div className="w-72 h-screen border-2 m-2 rounded-md">
             <div className="rounded-md ">
               {/* TRADING */}
