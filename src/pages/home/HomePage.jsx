@@ -18,7 +18,7 @@ export default function HomePage() {
   const { isVisible } = useScrollToVisible();
   return (
     <div>
-      <section className=" bg-yellow">
+      <section className="">
         {/* Fixed Header */}
         <div id="header" className="fixed top-0 w-full z-50">
           <Header />
@@ -168,7 +168,7 @@ export default function HomePage() {
               </div>
 
               {/* LAST ELEMENT FULL SCROLL WITH FOOTER*/}
-              <section className="absolute left-0 right-0 xl:-left-16 xl:-right-16 bg-white -mx-2 mt-10">
+              <section className="absolute left-0 right-0 xl:-left-16 xl:-right-16 -mx-2 mt-10 ">
                 <hr className="border-gray-500 py-8" />
                 {/* Horizontal Scroll Section */}
                 <div className=" mx-auto px-4">
@@ -176,13 +176,16 @@ export default function HomePage() {
                     Inspired by your browsing history
                   </h6>
                   <HorizontalScroll>
-                    <section className="flex justify-between gap-3 overflow-x-auto py-8 px-8">
+                    <section className="flex justify-between gap-3 overflow-x-auto py-8 ">
                       {[...Array(16)].map((_, index) => (
-                        <DetailsPriceCard key={index} />
+                        <DetailsPriceCard
+                          key={index}
+                          customClass="h-64 w-64 rounded-md"
+                        />
                       ))}
                     </section>
                   </HorizontalScroll>
-                  <hr className="border-gray-500 w-11/12 mx-auto" />
+                  <hr className="border-gray-500 w-11/12  mx-auto" />
                   {/* AUTH CONTENT*/}
                   <section className="py-4 px-4">
                     <div className=" flex flex-col gap-2 justify-center items-center">

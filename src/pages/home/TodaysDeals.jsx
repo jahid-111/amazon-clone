@@ -17,7 +17,7 @@ export default function TodaysDeals() {
         <div className="w-2/12">
           <InputRadio />
         </div>
-        <div className="border w-10/12 ">
+        <div className="border w-10/12 p-2">
           <div className=" grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
             {[...Array(34)].map((item, i) => (
               <ProdDetailsDisplayCard key={i} />
@@ -35,7 +35,10 @@ export default function TodaysDeals() {
           <HorizontalScroll>
             <section className="flex justify-between gap-3 overflow-x-auto py-8 px-8">
               {[...Array(16)].map((_, index) => (
-                <DetailsPriceCard key={index} />
+                <DetailsPriceCard
+                  key={index}
+                  customClass="h-64 w-64 rounded-md"
+                />
               ))}
             </section>
           </HorizontalScroll>

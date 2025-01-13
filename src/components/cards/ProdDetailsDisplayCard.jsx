@@ -5,24 +5,25 @@ export default function ProdDetailsDisplayCard() {
     <div className="">
       <div className="h-40  flex justify-center items-center bg-gray-100 rounded-sm">
         <img
-          src="../../../public/images/sliderImage/slider_one.png"
+          src="/images/sliderImage/slider_one.png"
           alt="Product Image"
           className=" w-full h-full p-4"
         />
       </div>
 
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex flex-row justify-between items-center gap-2 ">
         {/* Discount Badge */}
-        <div className="h-7 w-14 bg-red-700 flex items-center justify-center">
-          <p className="text-white text-xs font-semibold">40% Off</p>
+        <div className=" bg-red-700 flex items-center justify-center h-8 w-auto ">
+          <p className="text-white text-xs font-bold p-1">40% Off</p>
         </div>
         {/* Limited Offer Text */}
-        <div>
-          <p className="text-red-700 font-semibold text-xs">
+        <div className="">
+          <p className="text-red-700 text-xs font-semibold">
             Limited Time Deal
           </p>
         </div>
       </div>
+
       <div>
         <Link
           to={"/"}

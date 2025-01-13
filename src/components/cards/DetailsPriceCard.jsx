@@ -8,7 +8,7 @@ export default function DetailsPriceCard({ customClass, isBestSeller }) {
       <Link to="/">
         <img
           className={customClass}
-          src="../../../public/images/sliderImage/slider_three.png"
+          src="/images/sliderImage/slider_three.png"
           alt="Product Image"
         />
       </Link>

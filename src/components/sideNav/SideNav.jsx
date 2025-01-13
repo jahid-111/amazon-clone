@@ -34,7 +34,7 @@ export default function SideNav() {
       </div>
 
       {/* Section two */}
-      <div className="ms-2">
+      <div className="ms-4">
         {/* BRAND */}
         <div className="my-4">
           <ul>
@@ -79,12 +79,12 @@ export default function SideNav() {
         <div className="">
           <h5 className=" font-semibold my-1"> Customer Reviews</h5>
           <ul>
-            <Link className="flex justify-start items-center gap-1">
+            <Link className="flex justify-start items-center gap-1 hover:text-yellow ">
               {[...Array(4)].map((star) => (
                 <FaStar key={star} className=" text-yellow" />
               ))}
-              <FaRegStar className="text-yellow" />{" "}
-              <span className=" text-xs">& Up</span>
+              <FaRegStar className="text-yellow" />
+              <span className=" text-xs font-medium">& Up</span>
             </Link>
           </ul>
         </div>
