@@ -7,7 +7,7 @@ export default function SliderAuto({ slides, customClass, intervalTime }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Automatically switch slides
-  console.log(currentSlide);
+  // console.log(currentSlide);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);

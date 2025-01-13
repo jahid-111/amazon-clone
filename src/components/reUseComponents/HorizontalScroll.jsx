@@ -1,57 +1,56 @@
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
-const HorizontalScroll = ({ children }) => {
+const HorizontalScroll = ({
+  children,
+  scrollAmount = 400,
+  scrollDuration = 250,
+}) => {
   const scrollContainerRef = useRef(null);
 
-  function handleScrollX_Card(direction) {
+  const handleScroll = (direction) => {
     const container = scrollContainerRef.current;
 
     if (container) {
-      const scrollAmount = 400; // Adjust scroll speed (higher = faster)
-      const scrollSpeed = 250; // Speed of the scroll transition (lower = faster)
+      const start = container.scrollLeft;
+      const end =
+        direction === "left" ? start - scrollAmount : start + scrollAmount;
 
-      const scroll = (start, end) => {
-        const distance = end - start;
-        const step = distance / scrollSpeed;
+      let startTime;
 
-        let currentPosition = start;
-        const scrollInterval = setInterval(() => {
-          currentPosition += step;
-          container.scrollLeft = currentPosition;
+      const smoothScroll = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
 
-          if (
-            (step > 0 && currentPosition >= end) ||
-            (step < 0 && currentPosition <= end)
-          ) {
-            clearInterval(scrollInterval);
-            container.scrollLeft = end; // To make sure we end exactly at the target position
-          }
-        }, 10);
+        const progress = Math.min(elapsed / scrollDuration, 1);
+        const easedProgress =
+          progress < 0.5 ? 2 * progress ** 2 : 1 - (-2 * progress + 2) ** 2 / 2; // Ease-in-out cubic
+
+        container.scrollLeft = start + easedProgress * (end - start);
+
+        if (progress < 1) {
+          requestAnimationFrame(smoothScroll);
+        }
       };
 
-      if (direction === "left") {
-        scroll(container.scrollLeft, container.scrollLeft - scrollAmount);
-      } else if (direction === "right") {
-        scroll(container.scrollLeft, container.scrollLeft + scrollAmount);
-      }
+      requestAnimationFrame(smoothScroll);
     }
-  }
+  };
 
   return (
-    <div className="relative p-1 ">
+    <div className="relative p-1">
       <div className="absolute inset-0 flex items-center justify-between pointer-events-none">
         <button
-          onClick={() => handleScrollX_Card("left")}
-          className="px-3 py-2 pointer-events-auto blur-[1px] hover:blur-0 hover:text-gray-300 hover:border-r "
+          onClick={() => handleScroll("left")}
+          className="h-20 w-8 px-2 pointer-events-auto text-gray-50 hover:bg-slate-800 border-e rounded-e-md"
         >
-          <FaChevronLeft className="h-8 w-8" />
+          <FaChevronLeft className="h-4 w-4" />
         </button>
         <button
-          onClick={() => handleScrollX_Card("right")}
-          className="px-3 py-2 pointer-events-auto blur-[1px] hover:blur-0 hover:text-gray-300 hover:border-l "
+          onClick={() => handleScroll("right")}
+          className="h-20 w-8 px-2 pointer-events-auto text-gray-50 hover:bg-slate-800 border-s rounded-s-md"
         >
-          <FaChevronRight className="h-8 w-8" />
+          <FaChevronRight className="h-4 w-4" />
         </button>
       </div>
       <div className="overflow-x-auto pb-5" ref={scrollContainerRef}>

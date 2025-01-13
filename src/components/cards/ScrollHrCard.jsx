@@ -1,4 +1,4 @@
-export default function ScrollHrCard({ imageClass }) {
+export default function ScrollHrCard({ imageClass, isHeading, headName }) {
   return (
     <div className="">
       <div>
@@ -8,6 +8,11 @@ export default function ScrollHrCard({ imageClass }) {
           alt=""
         />
       </div>
+      {isHeading && (
+        <h6 className=" text-sm font-medium text-center my-2">
+          Name of Category - {headName + 1}
+        </h6>
+      )}
     </div>
   );
 }
