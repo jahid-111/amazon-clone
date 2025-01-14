@@ -25,4 +25,12 @@ const prodShipping = [
   { label: "Payment", value: "Secure Transaction" },
 ];
 
-export { specifications, aboutDetailsProduct, prodShipping };
+const productImage = [
+  "https://m.media-amazon.com/images/I/61Xb0ukxY-L._AC_SL1500_.jpg",
+  "https://m.media-amazon.com/images/I/71sN31ykRtL._AC_SL1500_.jpg",
+  "https://m.media-amazon.com/images/I/71fj7myyDkL._AC_SL1500_.jpg",
+  "https://m.media-amazon.com/images/I/814tk1uLy9L._AC_SL1500_.jpg",
+  "https://m.media-amazon.com/images/I/814tk1uLy9L._AC_SL1500_.jpg",
+];
+
+export { specifications, aboutDetailsProduct, prodShipping, productImage };
