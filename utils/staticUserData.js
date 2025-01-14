@@ -125,6 +125,14 @@ const ratingStar = [
 
 const conditionProducts = ["New", "Renewed", "Used"];
 
+const ratingsCurrentProduct = [
+  { stars: 5, percentage: 72 },
+  { stars: 4, percentage: 5 },
+  { stars: 3, percentage: 6 },
+  { stars: 2, percentage: 4 },
+  { stars: 1, percentage: 14 },
+];
+
 export {
   menuItems,
   searchCategory,
@@ -140,4 +148,5 @@ export {
   amazonDepartments,
   ratingStar,
   conditionProducts,
+  ratingsCurrentProduct,
 };

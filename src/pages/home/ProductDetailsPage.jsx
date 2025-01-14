@@ -9,7 +9,9 @@ import TradingAddCart from "../../components/detailsPagePricing/TradingAddCart";
 import NonTradingCart from "../../components/detailsPagePricing/NonTradingCart";
 import { productCover } from "../../../utils/phoneStaticData";
 import ProductCoverImages from "../../components/detailsPagePricing/ProductCoverImages";
-import { FaRegStar, FaStar } from "react-icons/fa";
+import { FaChevronDown, FaRegStar, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { ratingsCurrentProduct } from "../../../utils/staticUserData";
 
 export default function ProductDetailsPage() {
   return (
@@ -93,7 +95,35 @@ export default function ProductDetailsPage() {
             <p className=" my-3 text-sm font-medium">183 global ratings</p>
           </div>
 
-          {/* Star By Label, it's  definition */}
+          {/* Rating Breakdown, it's  definition */}
+          <div>
+            <div className="">
+              {ratingsCurrentProduct.map((rating) => (
+                <Link
+                  key={rating.stars}
+                  className=" text-blue text-sm font-semibold hover:underline  hover:text-gray-600"
+                >
+                  <div className="flex justify-start items-center gap-2 my-3">
+                    <h6>{rating.stars} star</h6>
+                    <div className="rounded-sm h-5 w-72 border border-gray-400">
+                      <div
+                        className="bg-orange-400 h-full rounded-e-sm   mt-0"
+                        style={{ width: `${rating.percentage}%` }}
+                      ></div>
+                    </div>
+                    <h6>{rating.percentage}%</h6>
+                  </div>
+                </Link>
+              ))}
+              <div className="flex items-center gap-2">
+                <FaChevronDown />
+                <Link className=" text-blue hover:underline hover:text-gray-600 text-sm">
+                  How are ratings calculated?
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* Review Link Button */}
         </div>
         {/* <div className=" border w-6/12 bg-green-200 h-[80rem]"></div> */}
