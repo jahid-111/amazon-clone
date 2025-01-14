@@ -9,6 +9,7 @@ import TradingAddCart from "../../components/detailsPagePricing/TradingAddCart";
 import NonTradingCart from "../../components/detailsPagePricing/NonTradingCart";
 import { productCover } from "../../../utils/phoneStaticData";
 import ProductCoverImages from "../../components/detailsPagePricing/ProductCoverImages";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 export default function ProductDetailsPage() {
   return (
@@ -69,9 +70,35 @@ export default function ProductDetailsPage() {
         </div>
       </div>
 
-      <div className=" xl:mx-28">
+      {/* PROD DETAILS COVER IMAGE */}
+      {/* <div className=" xl:mx-28">
         <ProductCoverImages />
+      </div> */}
+
+      <div className=" flex">
+        <div className=" border w-6/12 bg-gray-200 h-[40rem]">
+          {/* the Product Rating Star */}
+          <div>
+            <h3 className="text-xl font-bold">Customer Reviews</h3>
+
+            <div className=" flex justify-start items-center gap-3">
+              <div className=" flex  items-center justify-center gap-[2px]">
+                {[...Array(4)].map((star, i) => (
+                  <FaStar className=" h-5 w-5 text-yellow" key={i} />
+                ))}
+                <FaRegStar className="h-5 w-5 text-yellow" />
+              </div>
+              <h6 className=" text-xl  font-medium">4.1 out of 5</h6>
+            </div>
+            <p className=" my-3 text-sm font-medium">183 global ratings</p>
+          </div>
+
+          {/* Star By Label, it's  definition */}
+          {/* Review Link Button */}
+        </div>
+        {/* <div className=" border w-6/12 bg-green-200 h-[80rem]"></div> */}
       </div>
+
       {/* FULL WIDTH SECTION */}
     </div>
   );
