@@ -12,8 +12,11 @@ import ProductCoverImages from "../../components/detailsPagePricing/ProductCover
 import { FaChevronDown, FaRegStar, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { ratingsCurrentProduct } from "../../../utils/staticUserData";
+import customerReviews from "../../../utils/dummyData/reviewsCustomer";
 
 export default function ProductDetailsPage() {
+  const data = customerReviews;
+  console.log(data);
   return (
     <div className="my-3">
       <div className=" flex justify-between xl:px-28 px-2 mx-auto">
@@ -73,13 +76,13 @@ export default function ProductDetailsPage() {
       </div>
 
       {/* PROD DETAILS COVER IMAGE */}
-      {/* <div className=" xl:mx-28">
+      <div className="xl:mx-28">
         <ProductCoverImages />
-      </div> */}
+      </div>
       {/* RATINGS & REVIEW __Product */}
-      <div className="flex">
+      <div className="flex gap-3">
         {/* Ratings Distribution */}
-        <div className=" border xl:w-3/12 px-16 h-auto">
+        <div className="xl:w-4/12 xl:px-32 h-auto">
           {/* the Product Rating Star */}
           <div>
             <h3 className="text-xl font-bold">Customer Reviews</h3>
@@ -136,7 +139,49 @@ export default function ProductDetailsPage() {
             </button>
           </div>
         </div>
-        <div className=" border w-9/12 bg-green-200 h-[80rem]"></div>
+
+        {/* Customer Review content */}
+        <div className="w-8/12">
+          <div>
+            <h5 className="text-xl font-semibold">
+              Top reviews from Saudi Arabia
+            </h5>
+            {customerReviews.map((review) => (
+              <div
+                key={review?.user}
+                className="xl:me-96 flex flex-col gap-1 mt-5 "
+              >
+                {/* name star */}
+                <div className="flex items-center gap-2">
+                  <img src={review?.avatar} alt="reviewer" className="h-8" />
+                  <p className="text-sm font-medium">{review?.user}</p>
+                </div>
+
+                {/* Star Rating */}
+                <div className="flex">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <FaStar key={i} className="text-yellow" />
+                  ))}
+                </div>
+                {/*  date review */}
+                <p className="text-sm font-medium">{review?.date}</p>
+
+                <div className="flex gap-2 text-sm font-medium">
+                  <p>Size: {review.itemDetails.size}</p> |{" "}
+                  <p>Colour: {review.itemDetails.color}</p> |{" "}
+                  <p>
+                    {review.itemDetails.verified
+                      ? "Verified Purchase"
+                      : "Unverified Purchase"}
+                  </p>
+                </div>
+                {/* review content */}
+                <p className="font-semibold text-sm">{review?.reviewContent}</p>
+                {/* helpful action */}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* FULL WIDTH SECTION */}
