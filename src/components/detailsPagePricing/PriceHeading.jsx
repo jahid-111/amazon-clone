@@ -5,18 +5,19 @@ export default function PriceHeading() {
   return (
     <div className="pb-2 border-b">
       {/* Product Title */}
-      <h1 className="text-2xl font-bold">
+      <h1 className="text-2xl font-semibold">
         Apple iPhone 16 Pro Max (256 GB) - Black Titanium
       </h1>
 
       {/* Brand Link */}
-      <p className="mt-2">
-        <Link to="/" className="text-blue hover:underline text-sm">
+      <p className="">
+        <Link to="/" className="text-blue hover:underline text-sm font-medium">
           Visit the Apple Store
         </Link>
       </p>
 
       {/* Rating and Navigation */}
+      {/* NEED DEV */}
       <div className="flex justify-between items-center mt-3">
         {/* Rating Section */}
         <div className="flex items-center gap-2">

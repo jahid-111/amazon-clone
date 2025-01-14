@@ -1,12 +1,12 @@
 export default function TradingAddCart() {
   return (
-    <div className="hover:bg-gray-300 border-b pb-2">
-      <div className=" px-2">
+    <div className="hover:bg-gray-300 border-b p-2 cursor-pointer">
+      <div className="px-2">
         <div className=" flex justify-between items-center ">
-          <h6 className="font-bold">With Trade-in</h6>
+          <h6 className="font-semibold text-sm">With Trade-in</h6>
           <input type="radio" />
         </div>
-        <p className="text-start text-sm font-bold text-orange-600">
+        <p className="text-start text-sm font-medium text-red-800">
           Save upto SAR 1,760.00
         </p>
         <p className=" mt-5 text-xs font-medium">

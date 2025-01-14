@@ -13,12 +13,13 @@ export default function ProductDetailsPage() {
     <div>
       <div className=" flex justify-between px-28">
         {/* PHOTO INTRODUCE */}
-        <div className=" border flex">
+        <div className=" border flex justify-center">
           {/* MULTI PHOTO DISPLAY */}
-          <div className=" w-40 border h-screen ">
+          <div className="w-40 border h-screen ">
             <ProductMultiPhoto />
           </div>
           {/* SELECTED PHOTO */}
+
           <SelectedDetails />
         </div>
 
@@ -29,14 +30,12 @@ export default function ProductDetailsPage() {
             <PriceHeading />
 
             {/* PRICE */}
-
             <MainPrice />
-            <VariantProduct />
-
-            <div>
-              <p>size 128</p>
+            <div className="text-xs font-semibold">
+              <p>Size 128</p>
               <p>Style Iphone</p>
             </div>
+            <VariantProduct />
 
             {/* Specification */}
 
@@ -45,7 +44,7 @@ export default function ProductDetailsPage() {
             <div className=" mt-5">
               <AboutDetailsProduct />
             </div>
-            {/* SELLER Product */}
+            {/* Product SELLER image   */}
             <div>
               <img
                 className=" w-96 h-30"
@@ -56,8 +55,8 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* PRICING BY TRADE */}
-          <div className="w-72 h-screen border-2 m-2 rounded-md">
-            <div className="rounded-md ">
+          <div className="w-72 m-2 rounded-md">
+            <div className="rounded-md  border-2 ">
               {/* TRADING */}
               <TradingAddCart />
               {/*NON TRADING */}

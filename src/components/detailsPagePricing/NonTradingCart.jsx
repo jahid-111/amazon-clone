@@ -5,28 +5,33 @@ import { IoLocationOutline } from "react-icons/io5";
 
 export default function NonTradingCart() {
   return (
-    <div className="hover:bg-gray-300 pt-2">
+    <div className="hover:bg-gray-300 p-2 cursor-pointer">
       <div className="px-2">
         <div>
-          <div className=" flex justify-between items-center font-semibold">
-            <p>Without Trade-in</p>
-            <input type="radio" className="" />
+          <div className=" flex justify-between items-center">
+            <h6 className="font-semibold text-sm">With Trade-in</h6>
+            <input type="radio" />
           </div>
 
           <p className="text-start text-sm font-bold">
-            <span className="text-orange-600">SAR 1974.00</span>{" "}
+            <span className="text-red-800">SAR 1974.00</span>{" "}
             <span className="deprecated-style">SAR 2,599.00</span>
           </p>
 
-          <button className="mt-3">
-            <div className=" flex items-center">
-              <p className=" text-blue text-sm">FREE Returns</p>
+          {/* RETURN POLICY */}
+          <button className="mt-2">
+            <div className=" flex items-center ">
+              <p className=" text-blue text-sm hover:text-gray-900">
+                FREE Returns
+              </p>
               <IoIosArrowDown />
             </div>
           </button>
-          <div className="my-3">
+
+          {/* DELIVERY TERMS */}
+          <div className="">
             <p>
-              <Link className=" text-blue underline text-sm">
+              <Link className="text-blue text-sm hover:text-gray-900 underline ">
                 FREE delivery
               </Link>
               .
@@ -35,7 +40,7 @@ export default function NonTradingCart() {
                 January
               </span>
             </p>
-            <p className=" mt-3 text-sm">
+            <p className=" mt-1 text-sm">
               <span className=" font-medium"> Or fastest delivery</span>{" "}
               <span className=" font-bold">
                 Tomorrow, 14 <br /> January.
@@ -44,6 +49,8 @@ export default function NonTradingCart() {
               <span className=" text-green-700">1 hr 38 mins</span>
             </p>
           </div>
+
+          {/* DELIVERY LOCATION */}
           <div className=" flex items-center gap-2">
             <IoLocationOutline className="h-4 w-4" />
             <p className=" text-xs text-blue">
@@ -52,10 +59,11 @@ export default function NonTradingCart() {
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-3">
           <h4 className=" text-xl font-medium text-green-700">In Stock</h4>
 
           <div className="flex flex-col gap-2 mt-3">
+            {/* QUANTITY PROD */}
             <div className="w-full">
               <select
                 name="quantity"
@@ -68,13 +76,13 @@ export default function NonTradingCart() {
               </select>
             </div>
             {/* Add to Cart Button - Orange */}
-            <button className="bg-orange-400 text-gray-800 font-medium rounded-full py-2 text-xs px-10 transition-colors">
+            <button className="bg-[#fac942] text-gray-800 font-medium rounded-full py-2 text-xs px-10 transition-colors">
               Add To Cart
             </button>
 
             {/* Add to Cart Button - Yellow */}
-            <button className="bg-orange-500 text-gray-800 font-medium rounded-full py-2 text-xs px-10 hover:bg-yellow-500 transition-colors">
-              Add To Cart
+            <button className="bg-[#f89f3a] text-gray-800 font-medium rounded-full py-2 text-xs px-10 hover:bg-yellow-500 transition-colors">
+              Buy Now
             </button>
           </div>
         </div>
