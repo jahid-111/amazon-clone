@@ -1,6 +1,10 @@
 export default function VariantProduct() {
   return (
     <div>
+      <div className=" flex items-center gap-2 text-xs mt-2">
+        <p>Size : </p>
+        <strong> 1 TB</strong>
+      </div>
       <div className="flex gap-3 mt-2">
         <button className=" border-2 hover:bg-gray-100 hover:border-blue px-2  py-1 rounded-lg">
           1TB
@@ -14,6 +18,10 @@ export default function VariantProduct() {
       </div>
 
       {/* COLOR */}
+      <div className=" flex items-center gap-2 text-xs mt-2">
+        <p>Color : </p>
+        <strong> White Titanium </strong>
+      </div>
       <div className=" flex justify-start items-center gap-2 mt-2">
         <div className=" border rounded-md">
           <div className=" h-8 w-8 bg-green-400 rounded-full"></div>

@@ -10,23 +10,24 @@ import NonTradingCart from "../../components/detailsPagePricing/NonTradingCart";
 
 export default function ProductDetailsPage() {
   return (
-    <div>
-      <div className=" flex justify-between px-28">
+    <div className="my-3">
+      <div className=" flex justify-between xl:px-28 px-2 mx-auto">
         {/* PHOTO INTRODUCE */}
-        <div className=" border flex justify-center">
+        <div className="flex justify-center w-5/12">
           {/* MULTI PHOTO DISPLAY */}
-          <div className="w-40 border h-screen ">
+          <div className="mx-auto w-1/12">
             <ProductMultiPhoto />
           </div>
           {/* SELECTED PHOTO */}
-
-          <SelectedDetails />
+          <div className="w-11/12">
+            <SelectedDetails />
+          </div>
         </div>
 
         {/* DETAILS AND ORDER CART */}
-        <div className="border flex p-2">
+        <div className="flex mx-auto w-7/12">
           {/* HEADING */}
-          <div className="">
+          <div className="mx-auto  w-7/12">
             <PriceHeading />
 
             {/* PRICE */}
@@ -55,7 +56,7 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* PRICING BY TRADE */}
-          <div className="w-72 m-2 rounded-md">
+          <div className="w-5/12 mx-2 rounded-md">
             <div className="rounded-md  border-2 ">
               {/* TRADING */}
               <TradingAddCart />
