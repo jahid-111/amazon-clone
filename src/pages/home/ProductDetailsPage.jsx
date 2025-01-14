@@ -7,6 +7,8 @@ import SpecificationsProduct from "../../components/detailsPagePricing/Specifica
 import AboutDetailsProduct from "../../components/detailsPagePricing/AboutDetailsProduct";
 import TradingAddCart from "../../components/detailsPagePricing/TradingAddCart";
 import NonTradingCart from "../../components/detailsPagePricing/NonTradingCart";
+import { productCover } from "../../../utils/phoneStaticData";
+import ProductCoverImages from "../../components/detailsPagePricing/ProductCoverImages";
 
 export default function ProductDetailsPage() {
   return (
@@ -67,6 +69,9 @@ export default function ProductDetailsPage() {
         </div>
       </div>
 
+      <div className=" xl:mx-28">
+        <ProductCoverImages />
+      </div>
       {/* FULL WIDTH SECTION */}
     </div>
   );

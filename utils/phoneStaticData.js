@@ -33,4 +33,22 @@ const productImage = [
   "https://m.media-amazon.com/images/I/814tk1uLy9L._AC_SL1500_.jpg",
 ];
 
-export { specifications, aboutDetailsProduct, prodShipping, productImage };
+const productCover = [
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_01._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_02._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_03._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_04._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_05._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_06._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_07._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_08._CB563744925_.jpg",
+  "https://m.media-amazon.com/images/G/40/Apple/GBEN_iPhone_16_Pro_5G_Q424_Web_Marketing_Page_PSD_Bronze_L_09._CB563744925_.jpg",
+];
+
+export {
+  specifications,
+  aboutDetailsProduct,
+  prodShipping,
+  productImage,
+  productCover,
+};
