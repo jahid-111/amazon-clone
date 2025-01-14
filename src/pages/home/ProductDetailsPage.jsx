@@ -76,9 +76,10 @@ export default function ProductDetailsPage() {
       {/* <div className=" xl:mx-28">
         <ProductCoverImages />
       </div> */}
-
-      <div className=" flex">
-        <div className=" border w-6/12 bg-gray-200 h-[40rem]">
+      {/* RATINGS & REVIEW __Product */}
+      <div className="flex">
+        {/* Ratings Distribution */}
+        <div className=" border xl:w-3/12 px-16 h-auto">
           {/* the Product Rating Star */}
           <div>
             <h3 className="text-xl font-bold">Customer Reviews</h3>
@@ -105,7 +106,7 @@ export default function ProductDetailsPage() {
                 >
                   <div className="flex justify-start items-center gap-2 my-3">
                     <h6>{rating.stars} star</h6>
-                    <div className="rounded-sm h-5 w-72 border border-gray-400">
+                    <div className="rounded-sm h-5 w-8/12 border border-gray-400">
                       <div
                         className="bg-orange-400 h-full rounded-e-sm   mt-0"
                         style={{ width: `${rating.percentage}%` }}
@@ -115,7 +116,7 @@ export default function ProductDetailsPage() {
                   </div>
                 </Link>
               ))}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 pb-5 border-b">
                 <FaChevronDown />
                 <Link className=" text-blue hover:underline hover:text-gray-600 text-sm">
                   How are ratings calculated?
@@ -125,8 +126,17 @@ export default function ProductDetailsPage() {
           </div>
 
           {/* Review Link Button */}
+          <div className="flex flex-col  justify-center gap-3">
+            <h5 className="text-xl font-bold">Review this product</h5>
+            <p className="font-semibold text-xs">
+              Share your thoughts with other customers
+            </p>
+            <button className="text-sm font-medium border px-10 py-1 rounded-full hover:bg-gray-100">
+              Write a customer Review
+            </button>
+          </div>
         </div>
-        {/* <div className=" border w-6/12 bg-green-200 h-[80rem]"></div> */}
+        <div className=" border w-9/12 bg-green-200 h-[80rem]"></div>
       </div>
 
       {/* FULL WIDTH SECTION */}
