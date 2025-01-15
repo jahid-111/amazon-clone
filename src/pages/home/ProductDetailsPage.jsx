@@ -15,6 +15,7 @@ import CustomerReview from "../../components/detailsPagePricing/ratingReview/Cus
 import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
+import dummyProductsOne from "../../../utils/dummyData/productListOne";
 
 export default function ProductDetailsPage() {
   return (
@@ -118,9 +119,9 @@ export default function ProductDetailsPage() {
             Related to items you have viewed
           </h5>
           <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-            {[...Array(20)].map((_, i) => (
+            {dummyProductsOne.map((prod, i) => (
               <div key={i} className="flex-shrink-0">
-                <DetailsPriceCard customClass="h-56 w-56" />
+                <DetailsPriceCard product={prod} customClass="h-44 w-22 p-5" />
               </div>
             ))}
           </HorizontalScroll>
@@ -132,7 +133,7 @@ export default function ProductDetailsPage() {
           <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
             {[...Array(20)].map((_, i) => (
               <div key={i} className="flex-shrink-0">
-                <DetailsPriceCard customClass="h-56 w-56" />
+                <DetailsPriceCard customClass="h-44 w-22 p-5" />
               </div>
             ))}
           </HorizontalScroll>

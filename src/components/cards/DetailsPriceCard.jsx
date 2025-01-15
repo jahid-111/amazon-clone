@@ -2,18 +2,22 @@ import { Link } from "react-router-dom";
 import RatingsPrice from "../reUseComponents/RatingsPrice";
 import PhotoOptimize from "../reUseComponents/images/PhotoOptimize";
 
-export default function DetailsPriceCard({ customClass, isBestSeller }) {
+export default function DetailsPriceCard({
+  customClass,
+  isBestSeller,
+  product,
+}) {
   return (
     <div>
       {/* Product Image */}
       <PhotoOptimize customClass={customClass} />
       {/* Product Name */}
       <Link className="text-blue hover:underline">
-        <h6>Product name go here</h6>
+        <h6>{product?.name}</h6>
       </Link>
 
       {/* Ratings and Price Component */}
-      <RatingsPrice />
+      <RatingsPrice product={product} />
 
       {/* Polygon Badge */}
       {isBestSeller && (

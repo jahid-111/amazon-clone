@@ -6,7 +6,7 @@ export default function PhotoOptimize({ customClass }) {
     <Link to="product/id">
       <img
         className={customClass}
-        src="/images/sliderImage/slider_three.png"
+        src="https://images-eu.ssl-images-amazon.com/images/I/41Q1MeSb4YL._AC_UL330_SR330,330_.jpg"
         alt="Product Image"
       />
     </Link>
