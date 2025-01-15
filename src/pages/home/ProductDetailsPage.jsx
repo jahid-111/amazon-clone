@@ -16,10 +16,13 @@ import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
 import dummyProductsOne from "../../../utils/dummyData/productListOne";
+import PriceCompare from "../../components/compareProduct/PriceCompare";
 
 export default function ProductDetailsPage() {
   return (
     <div className="my-3">
+      <PriceCompare />
+
       <div className=" flex justify-between xl:px-28 px-2 mx-auto">
         {/* PHOTO INTRODUCE */}
         <div className="flex justify-center w-5/12">
