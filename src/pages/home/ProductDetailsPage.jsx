@@ -8,15 +8,15 @@ import AboutDetailsProduct from "../../components/detailsPagePricing/AboutDetail
 import TradingAddCart from "../../components/detailsPagePricing/TradingAddCart";
 import NonTradingCart from "../../components/detailsPagePricing/NonTradingCart";
 import ProductCoverImages from "../../components/detailsPagePricing/ProductCoverImages";
-import customerReviews from "../../../utils/dummyData/reviewsCustomer";
 import RatingStar from "../../components/detailsPagePricing/ratingReview/RatingStar";
 import RatingsBreakdown from "../../components/detailsPagePricing/ratingReview/RatingsBreakdown";
 import ReviewLink from "../../components/detailsPagePricing/ratingReview/ReviewLink";
 import CustomerReview from "../../components/detailsPagePricing/ratingReview/CustomerReview";
+import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
+
+import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
 
 export default function ProductDetailsPage() {
-  const data = customerReviews;
-  console.log(data);
   return (
     <div className="my-3">
       <div className=" flex justify-between xl:px-28 px-2 mx-auto">
@@ -111,6 +111,33 @@ export default function ProductDetailsPage() {
       </div>
 
       {/* FULL WIDTH SECTION */}
+      <div className="p-4">
+        {/* <h1 className="text-2xl font-bold mb-4">Horizontal Scroll Example</h1> */}
+        <div className=" my-3">
+          <h5 className="font-semibold text-gray-500">
+            Related to items you have viewed
+          </h5>
+          <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="flex-shrink-0">
+                <DetailsPriceCard customClass="h-56 w-56" />
+              </div>
+            ))}
+          </HorizontalScroll>
+        </div>
+        <div className=" my-3">
+          <h5 className="font-semibold text-gray-500">
+            More items to consider
+          </h5>
+          <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+            {[...Array(20)].map((_, i) => (
+              <div key={i} className="flex-shrink-0">
+                <DetailsPriceCard customClass="h-56 w-56" />
+              </div>
+            ))}
+          </HorizontalScroll>
+        </div>
+      </div>
     </div>
   );
 }

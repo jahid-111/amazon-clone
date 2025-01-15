@@ -1,18 +1,12 @@
 import { Link } from "react-router-dom";
 import RatingsPrice from "../reUseComponents/RatingsPrice";
+import PhotoOptimize from "../reUseComponents/images/PhotoOptimize";
 
 export default function DetailsPriceCard({ customClass, isBestSeller }) {
   return (
     <div>
       {/* Product Image */}
-      <Link to="/">
-        <img
-          className={customClass}
-          src="/images/sliderImage/slider_three.png"
-          alt="Product Image"
-        />
-      </Link>
-
+      <PhotoOptimize customClass={customClass} />
       {/* Product Name */}
       <Link className="text-blue hover:underline">
         <h6>Product name go here</h6>
