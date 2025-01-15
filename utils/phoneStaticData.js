@@ -47,6 +47,8 @@ const productCover = [
 
 const compareProduct = [
   {
+    photo:
+      "https://m.media-amazon.com/images/G/40/Apple_V2/compchart/iPhone_16_Pro_Max._CB563502897_.png",
     name: "iPhone 16 Pro Max",
     price: "From: SAR 7,479.00",
     ratings: "4.1 out of 5 stars (185)",
@@ -64,6 +66,8 @@ const compareProduct = [
     compatibleWithMagsafeAccessories: true,
   },
   {
+    photo:
+      "https://m.media-amazon.com/images/G/40/Apple_V2/compchart/iPhone_16_Pro._CB563502897_.png",
     name: "iPhone 16 Pro Max",
     price: "From: SAR 6,699.00",
     ratings: "4.5 out of 5 stars (129)",
@@ -71,16 +75,19 @@ const compareProduct = [
     chip: "A18 Pro",
     finish: "Titanium",
     dynamicIsland: true,
-    camera: "Pro 48MP camera system (Ultra Wide, Main,Pro 48MP camera system (Ultra Wide, MainPro 48MP camera system (Ultra Wide, MainPro 48MP camera system (Ultra Wide, MainPro 48MP camera system (Ultra Wide, Main and Telephoto)",
+    camera:
+      "Pro 48MP camera system (Ultra Wide, Main,Pro 48MP camera system (Ultra Wide, MainPro 48MP camera system (Ultra Wide, MainPro 48MP camera system (Ultra Wide, MainPro 48MP camera system (Ultra Wide, Main and Telephoto)",
     frontFacingCamera: "12MP TrueDepth camera",
     opticalZoomOptions: "0.5x, 1x, 2x, 5x",
     secureAuthentication: "Face ID",
     battery: "Up to 27 hours video playback",
     connector: "USB‑C",
     capacity: ["128GB", "256GB", "512GB", "1TB"],
-    compatibleWithMagsafeAccessories: true,
+    compatibleWithMagsafeAccessories: false,
   },
   {
+    photo:
+      "https://m.media-amazon.com/images/G/40/Apple_V2/compchart/iPhone_16_PLus._CB563502897_.png",
     name: "iPhone 16 Pro",
     price: "From: SAR 5,479.00",
     ratings: "4.3 out of 5 stars (39)",
@@ -98,6 +105,8 @@ const compareProduct = [
     compatibleWithMagsafeAccessories: true,
   },
   {
+    photo:
+      "https://m.media-amazon.com/images/G/40/Apple_V2/compchart/iPhone_16._CB563502897_.png",
     name: "iPhone 16",
     price: "From: SAR 5,079.00",
     ratings: "4.4 out of 5 stars (40)",

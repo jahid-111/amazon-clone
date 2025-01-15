@@ -21,8 +21,6 @@ import PriceCompare from "../../components/compareProduct/PriceCompare";
 export default function ProductDetailsPage() {
   return (
     <div className="my-3">
-      <PriceCompare />
-
       <div className=" flex justify-between xl:px-28 px-2 mx-auto">
         {/* PHOTO INTRODUCE */}
         <div className="flex justify-center w-5/12">
@@ -114,6 +112,8 @@ export default function ProductDetailsPage() {
         </div>
       </div>
 
+      {/* Price Compare Product */}
+      <PriceCompare />
       {/* FULL WIDTH SECTION */}
       <div className="p-4">
         {/* <h1 className="text-2xl font-bold mb-4">Horizontal Scroll Example</h1> */}
