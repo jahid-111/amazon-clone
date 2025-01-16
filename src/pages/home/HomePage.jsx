@@ -4,15 +4,10 @@ import Navigation from "../../components/singleRoot/Navigation";
 import SliderAuto from "../../components/reUseComponents/SliderAuto";
 import SellPrimaryCard from "../../components/cards/SellPrimaryCard";
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
-import ScrollHrCard from "../../components/cards/ScrollHrCard";
 import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import { Link } from "react-router-dom";
-import {
-  aboutUs,
-  helpAndSupport,
-  makeMoneyWithUs,
-  shopWithUs,
-} from "../../../utils/staticUserData";
+import dummyProductsOne from "../../../utils/dummyData/productListOne";
+import Footer from "../../components/Footer";
 
 export default function HomePage() {
   const { isVisible } = useScrollToVisible();
@@ -57,15 +52,16 @@ export default function HomePage() {
               {/* Horizontal Scroll Section */}
               <div className="w-full bg-gray-100 px-2 mt-7">
                 <h3 className="text-2xl font-semibold text-start pt-4 pb-1">
-                  Top picks on children books from SAR 6
+                  Top picks on children books from SAR 1
                 </h3>
-
-                <HorizontalScroll>
-                  {[...Array(16)].map((_, index) => (
-                    <ScrollHrCard
-                      imageClass="w-32 h-56 cursor-pointer"
-                      key={index}
-                    />
+                <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                  {dummyProductsOne.map((prod, i) => (
+                    <div key={i} className="flex-shrink-0">
+                      <DetailsPriceCard
+                        product={prod}
+                        customClass="h-44 w-22 p-5"
+                      />
+                    </div>
                   ))}
                 </HorizontalScroll>
               </div>
@@ -81,15 +77,17 @@ export default function HomePage() {
               {/* Horizontal Scroll Section */}
               <div className="w-full bg-gray-100 px-2 mt-7">
                 <h3 className="text-2xl font-semibold text-start pt-4 pb-1">
-                  Top picks on children books from SAR 6
+                  Top picks on children books from SAR 2
                 </h3>
 
-                <HorizontalScroll>
-                  {[...Array(16)].map((_, index) => (
-                    <ScrollHrCard
-                      imageClass="w-32 h-56 cursor-pointer"
-                      key={index}
-                    />
+                <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                  {dummyProductsOne.map((prod, i) => (
+                    <div key={i} className="flex-shrink-0">
+                      <DetailsPriceCard
+                        product={prod}
+                        customClass="h-44 w-22 p-5"
+                      />
+                    </div>
                   ))}
                 </HorizontalScroll>
               </div>
@@ -105,15 +103,17 @@ export default function HomePage() {
               {/* Horizontal Scroll Section */}
               <div className="w-full bg-gray-100 px-2 mt-7">
                 <h3 className="text-2xl font-semibold text-start pt-4 pb-1">
-                  Top picks on children books from SAR 6
+                  Top picks on children books from SAR 3
                 </h3>
 
-                <HorizontalScroll>
-                  {[...Array(16)].map((_, index) => (
-                    <ScrollHrCard
-                      imageClass="w-32 h-56 cursor-pointer"
-                      key={index}
-                    />
+                <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                  {dummyProductsOne.map((prod, i) => (
+                    <div key={i} className="flex-shrink-0">
+                      <DetailsPriceCard
+                        product={prod}
+                        customClass="h-44 w-22 p-5"
+                      />
+                    </div>
                   ))}
                 </HorizontalScroll>
               </div>
@@ -129,15 +129,17 @@ export default function HomePage() {
               {/* Horizontal Scroll Section */}
               <div className="w-full bg-gray-100 px-2 mt-7">
                 <h3 className="text-2xl font-semibold text-start pt-4 pb-1">
-                  Top picks on children books from SAR 6
+                  Top picks on children books from SAR 4
                 </h3>
 
-                <HorizontalScroll>
-                  {[...Array(16)].map((_, index) => (
-                    <ScrollHrCard
-                      imageClass="w-32 h-56 cursor-pointer"
-                      key={index}
-                    />
+                <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                  {dummyProductsOne.map((prod, i) => (
+                    <div key={i} className="flex-shrink-0">
+                      <DetailsPriceCard
+                        product={prod}
+                        customClass="h-44 w-22 p-5"
+                      />
+                    </div>
                   ))}
                 </HorizontalScroll>
               </div>
@@ -157,33 +159,36 @@ export default function HomePage() {
                   Top picks on children books from SAR 6
                 </h3>
 
-                <HorizontalScroll>
-                  {[...Array(16)].map((_, index) => (
-                    <ScrollHrCard
-                      imageClass="w-32 h-56 cursor-pointer"
-                      key={index}
-                    />
+                <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                  {dummyProductsOne.map((prod, i) => (
+                    <div key={i} className="flex-shrink-0">
+                      <DetailsPriceCard
+                        product={prod}
+                        customClass="h-44 w-22 p-5"
+                      />
+                    </div>
                   ))}
                 </HorizontalScroll>
               </div>
 
               {/* LAST ELEMENT FULL SCROLL WITH FOOTER*/}
-              <section className="absolute left-0 right-0 xl:-left-16 xl:-right-16 -mx-2 mt-10 ">
-                <hr className="border-gray-500 py-8" />
+              <section className="absolute left-0 right-0 xl:-left-16 xl:-right-16 -mx-2 mt-10  bg-gray-100">
+                <hr className="border-gray-500 my-8" />
                 {/* Horizontal Scroll Section */}
                 <div className=" mx-auto px-4">
-                  <h6 className=" text-xl font-semibold ps-10">
-                    Inspired by your browsing history
+                  <h6 className=" text-xl font-semibold ps-10 pb-5">
+                    Inspired by your browsing history 5
                   </h6>
-                  <HorizontalScroll>
-                    <section className="flex justify-between gap-3 overflow-x-auto py-8 ">
-                      {[...Array(16)].map((_, index) => (
+                  <HorizontalScroll containerStyles="gap-5 pt-2 pb-7 mb-2">
+                    {dummyProductsOne.map((prod, i) => (
+                      <div key={i} className="flex-shrink-0">
                         <DetailsPriceCard
-                          key={index}
-                          customClass="h-64 w-64 rounded-md"
+                          product={prod}
+                          customClass="h-44 w-22 p-5"
+                          // isBestSeller={true}
                         />
-                      ))}
-                    </section>
+                      </div>
+                    ))}
                   </HorizontalScroll>
                   <hr className="border-gray-500 w-11/12  mx-auto" />
                   {/* AUTH CONTENT*/}
@@ -206,78 +211,7 @@ export default function HomePage() {
                   <hr className="border-gray-500 my-3" />
                 </div>
                 {/* FOOTER */}
-                <footer className="bg-primary">
-                  <button className=" block text-center w-full bg-slate-700 hover:bg-slate-600 text-gray-200 py-4 text-xs font-semibold">
-                    BACK TO TOP
-                  </button>
-                  <div className=" mx-auto text-gray-200 ">
-                    {/* TOP Footer */}
-                    <div className="flex gap-5 justify-center items-center">
-                      <div className=" min-h-80  w-72 my-10 p-7 ">
-                        <h5 className="font-bold text-white mb-2">
-                          Get To know Us
-                        </h5>
-                        <ul className="flex flex-col justify-center items-start">
-                          {aboutUs.map((link) => (
-                            <li key={link} className=" font-">
-                              <Link to={"/"} className=" hover:underline">
-                                {link}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className=" min-h-80  w-72 my-10 p-7">
-                        <h5 className="font-bold text-white mb-2">
-                          Shop With Us
-                        </h5>
-                        <ul className="flex flex-col justify-center items-start yes">
-                          {shopWithUs.map((link) => (
-                            <li key={link} className=" font-">
-                              <Link to={"/"} className=" hover:underline">
-                                {link}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className=" min-h-80  w-72 my-10 p-7">
-                        <h5 className="font-bold text-white mb-2">
-                          Make Money with Us
-                        </h5>
-                        <ul className="flex flex-col justify-center items-start yes">
-                          {makeMoneyWithUs.map((link) => (
-                            <li key={link} className=" font-">
-                              <Link to={"/"} className=" hover:underline">
-                                {link}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className=" min-h-80  w-72 my-10 p-7">
-                        <h5 className="font-bold text-white mb-2">
-                          Let Us Help You
-                        </h5>
-                        <ul className="flex flex-col justify-center items-start yes">
-                          {helpAndSupport.map((link) => (
-                            <li key={link} className=" font-">
-                              <Link to={"/"} className=" hover:underline">
-                                {link}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    {/* BOTTOM Footer */}
-                    <div className=" bg-gray-900">
-                      <p className=" text-center py-3">
-                        ©1996–2025, Amazon.com, Inc. or its affiliates
-                      </p>
-                    </div>
-                  </div>
-                </footer>
+                <Footer />
               </section>
             </section>
           </div>

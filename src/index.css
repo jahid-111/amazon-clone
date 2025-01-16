@@ -5,7 +5,7 @@
 
   color-scheme: #f2f2f2;
   color: rgba(35, 33, 33, 0.87);
-  background-color: #ffffff;
+  background-color: #d4d0d0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,6 +29,9 @@
 }
 .flex-center {
   @apply flex justify-center items-center;
+}
+.sell-primary-button {
+  @apply text-xs font-medium  text-blue px-4 py-2 rounded  hover:text-gray-800 transition duration-300;
 }
 
 @tailwind base;

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function RatingsPrice({ product }) {
+  console.log(product);
   return (
     <div>
       <p>brand</p>
