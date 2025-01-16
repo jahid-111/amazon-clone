@@ -6,7 +6,7 @@ import ProductDetailsPage from "./pages/home/ProductDetailsPage";
 import TodaysDeals from "./pages/home/TodaysDeals";
 
 function App() {
-  return <TodaysDeals />;
+  return <ProductDetailsPage />;
 }
 
 export default App;

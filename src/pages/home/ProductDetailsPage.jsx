@@ -36,8 +36,12 @@ export default function ProductDetailsPage() {
             <ProductMultiPhoto />
           </div>
           {/* SELECTED PHOTO */}
-          <div className="w-11/12">
+
+          <div className=" w-11/12">
+            {/* Selected Details */}
             <SelectedDetails />
+
+            {/* Invisible by default, visible on hover */}
           </div>
         </div>
 
@@ -85,7 +89,7 @@ export default function ProductDetailsPage() {
       </div>
 
       {/* PROD DETAILS COVER IMAGE */}
-      <div className="xl:mx-28">
+      <div className="xl:mx-28 bg-red-300 m-2">
         <ProductCoverImages />
       </div>
       {/* RATINGS & REVIEW __Product */}
