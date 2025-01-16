@@ -1,6 +1,3 @@
-import Header from "../../components/singleRoot/Header";
-import useScrollToVisible from "../../hooks/useScrollToVisible";
-import Navigation from "../../components/singleRoot/Navigation";
 import SliderAuto from "../../components/reUseComponents/SliderAuto";
 import SellPrimaryCard from "../../components/cards/SellPrimaryCard";
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
@@ -8,27 +5,14 @@ import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import { Link } from "react-router-dom";
 import dummyProductsOne from "../../../utils/dummyData/productListOne";
 import Footer from "../../components/Footer";
+import HeaderMain from "../../components/HeaderMain";
 
 export default function HomePage() {
-  const { isVisible } = useScrollToVisible();
   return (
     <div>
       <section className="">
         {/* Fixed Header */}
-        <div id="header" className="fixed top-0 w-full z-50">
-          <Header />
-
-          {/* NAVIGATOR */}
-          <div
-            className={`transition-all duration-500 ${
-              isVisible
-                ? "opacity-100 translate-y-0 delay-300"
-                : "opacity-0 translate-y-[-20px] delay-0" // No delay when hidden
-            }`}
-          >
-            <Navigation />
-          </div>
-        </div>
+        <HeaderMain />
 
         <main id="main" className="relative mt-24 xl:w-11/12 mx-auto">
           {/* HERO SECTION */}

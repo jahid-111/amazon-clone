@@ -17,11 +17,18 @@ import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
 import dummyProductsOne from "../../../utils/dummyData/productListOne";
 import PriceCompare from "../../components/compareProduct/PriceCompare";
+import HeaderMain from "../../components/HeaderMain";
+import useScrollToVisible from "../../hooks/useScrollToVisible";
+import Footer from "../../components/Footer";
 
 export default function ProductDetailsPage() {
+  const { isVisible } = useScrollToVisible();
+
+  // console.log(isVisible);
   return (
-    <div className="my-3">
-      <div className=" flex justify-between xl:px-28 px-2 mx-auto">
+    <main className="my-3">
+      {isVisible && <HeaderMain />}
+      <div className=" flex justify-between xl:px-28 px-2 mx-auto mt-24 pt-10">
         {/* PHOTO INTRODUCE */}
         <div className="flex justify-center w-5/12">
           {/* MULTI PHOTO DISPLAY */}
@@ -142,6 +149,7 @@ export default function ProductDetailsPage() {
           </HorizontalScroll>
         </div>
       </div>
-    </div>
+      <Footer />
+    </main>
   );
 }

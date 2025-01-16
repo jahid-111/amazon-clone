@@ -6,14 +6,16 @@ import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import Footer from "../../components/Footer";
 import dummyProductsOne from "../../../utils/dummyData/productListOne";
 import brandImage from "../../../utils/imageExports.js";
+import HeaderMain from "../../components/HeaderMain.jsx";
 export default function TodaysDeals() {
   return (
     <div className="">
-      <section className="flex justify-center xl:w-10/12 mx-auto px-3">
+      <HeaderMain />
+      <section className="flex justify-center xl:w-10/12 mx-auto px-3 mt-24 pt-10">
         <div className="w-2/12">
           <InputRadio />
         </div>
-        <div className="border w-10/12 p-2">
+        <div className="w-10/12 p-2">
           <HorizontalScroll containerStyles="horizontal-scroll gap-5 pt-2 pb-7 my-4">
             <div className="flex gap-3">
               {brandImage.map((img, index) => (
