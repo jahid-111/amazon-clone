@@ -1,30 +1,56 @@
 import { useState } from "react";
 
 export default function SelectedDetails() {
-  const [visible, setVisible] = useState(null);
+  const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0, show: false });
+
+  const handleMouseMove = (e) => {
+    const rect = e.target.getBoundingClientRect();
+    // console.log(rect);
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+    setZoomPosition({ x, y, show: true });
+  };
+
+  const handleMouseLeave = () => {
+    setZoomPosition({ ...zoomPosition, show: false });
+  };
 
   return (
-    <>
+    <div className=" p-16">
+      {/* Main Image */}
       <div
-        onMouseEnter={() => setVisible(true)}
-        onMouseLeave={() => setVisible(false)}
-        className="p-16 cursor-pointer"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="cursor-pointer relative"
       >
         <img
           src="https://m.media-amazon.com/images/I/61VuVU94RnL._AC_SL1500_.jpg"
-          alt=""
-          className=""
+          alt="Main Photo"
+          className="w-full max-w-md"
         />
       </div>
-      {visible && (
-        <div className="absolute right-28 top-48 flex justify-center items-center bottom-28 max-h-full">
-          <img
-            src="https://m.media-amazon.com/images/I/61VuVU94RnL._AC_SL1500_.jpg"
-            alt="Hovered Photo"
-            className=" h-[50rem] border-2 border-gray-300 rounded-sm py-2 shadow-2xl shadow-stone-500 object-cove min-w-[40rem]  z-50"
-          />
-        </div>
-      )}
-    </>
+      <div className="overflow-hidden h-full w-full p-14 z-50">
+        {zoomPosition.show && (
+          <div className="absolute overflow-hidden right-10 top-28 h-[30rem] w-[30rem] xl:h-[50rem] xl:w-[50rem] z-50 rounded-md border-gray-800 border-dotted  border-2 shadow-2xl">
+            <div className="bg-[#fffdfd] h-full w-full flex items-center justify-center overflow-hidden rounded-md">
+              <div>
+                <img
+                  src="https://m.media-amazon.com/images/I/61VuVU94RnL._AC_SL1500_.jpg"
+                  alt="Zoomed Photo"
+                  className="absolute z-50 mx-auto "
+                  style={{
+                    transform: `translate(-${zoomPosition.x}%, -${zoomPosition.y}%) scale(1.5)`,
+                    transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
+                    width: "200%",
+                    height: "auto",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
