@@ -2,32 +2,29 @@ import { Link } from "react-router-dom";
 
 export default function ProdDetailsDisplayCard() {
   return (
-    <div className="">
+    <div className=" cursor-pointer">
       <div className="h-40  flex justify-center items-center bg-gray-100 rounded-sm">
         <img
-          src="/images/sliderImage/slider_one.png"
+          src="https://shakersa.com/wp-content/uploads/MFTN20A.png"
           alt="Product Image"
           className=" w-full h-full p-4"
         />
       </div>
 
-      <div className="flex flex-row justify-between items-center gap-2 ">
+      <div className="flex flex-row justify-between items-center gap-2 mt-1 ">
         {/* Discount Badge */}
-        <div className=" bg-red-700 flex items-center justify-center h-8 w-auto ">
+        <div className=" bg-red-700 flex items-center justify-center w-auto ">
           <p className="text-white text-xs font-bold p-1">40% Off</p>
         </div>
         {/* Limited Offer Text */}
-        <div className="">
-          <p className="text-red-700 text-xs font-semibold">
-            Limited Time Deal
-          </p>
-        </div>
+
+        <p className="text-red-700 text-xs font-semibold">Limited Time Deal</p>
       </div>
 
       <div>
         <Link
           to={"/"}
-          className=" text-firstClass text-[.8rem] font-semibold hover:text-orange-600 -leading-[10px]	"
+          className=" text-gray-700 text-[.8rem] font-semibold hover:text-orange-600 -leading-[10px]	"
         >
           <p>Product name click to Details Page </p>
         </Link>
