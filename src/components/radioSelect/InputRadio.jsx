@@ -6,7 +6,7 @@ import DiscountFilter from "./DiscountFilter";
 
 export default function InputRadio({ type }) {
   return (
-    <div className="sticky top-1">
+    <div className="sticky top-14">
       <RadioForm>
         <DepartmentCategory />
         <RatingsFilter />

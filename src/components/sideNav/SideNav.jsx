@@ -11,7 +11,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 
 export default function SideNav() {
   return (
-    <div>
+    <div className=" sticky top-24 h-screen overflow-y-scroll pe-4">
       {/* HEADING */}
       <div className="my-1">
         <h5 className=" font-semibold ">Category</h5>
@@ -82,8 +82,8 @@ export default function SideNav() {
           <h5 className=" font-semibold my-1"> Customer Reviews</h5>
           <ul>
             <Link className="flex justify-start items-center gap-1 hover:text-yellow ">
-              {[...Array(4)].map((star) => (
-                <FaStar key={star} className=" text-yellow" />
+              {[...Array(4)].map((star, i) => (
+                <FaStar key={(star, i)} className=" text-yellow" />
               ))}
               <FaRegStar className="text-yellow" />
               <span className=" text-xs font-medium">& Up</span>
@@ -123,28 +123,30 @@ export default function SideNav() {
           </ul>
         </div>
         {/* SELLER  */}
-        <ul className="my-4">
-          <fieldset>
-            <legend>
-              <span className="font-semibold">Brands</span>
-            </legend>
-            <div className=" flex flex-col justify-around items-start ">
-              {sellerName.map((brand) => (
-                <div key={brand} className=" hover:text-orange-400">
-                  <input
-                    type="checkbox"
-                    name={brand}
-                    id={brand}
-                    className="me-1  cursor-pointer"
-                  />
-                  <label htmlFor={brand} className="cursor-pointer">
-                    {brand}
-                  </label>
-                </div>
-              ))}
-            </div>
-          </fieldset>
-        </ul>
+        <div className="my-4 ">
+          <ul>
+            <fieldset>
+              <legend>
+                <span className="font-semibold">Brands</span>
+              </legend>
+              <div className=" flex flex-col justify-around items-start ">
+                {sellerName.map((brand) => (
+                  <div key={brand} className=" hover:text-orange-400">
+                    <input
+                      type="checkbox"
+                      name={brand}
+                      id={brand}
+                      className="me-1  cursor-pointer"
+                    />
+                    <label htmlFor={brand} className="cursor-pointer">
+                      {brand}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </fieldset>
+          </ul>
+        </div>
       </div>
     </div>
   );

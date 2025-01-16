@@ -22,12 +22,15 @@ import {
 } from "../../../utils/staticUserData";
 import { Link } from "react-router-dom";
 import BackToTop from "../../components/reUseComponents/BackToTop";
+import HeaderMain from "../../components/HeaderMain";
+import dummyProductsOne from "../../../utils/dummyData/productListOne";
 const slides = [imageOne, imageTwo, imageThree, imageFour];
 const witdhImge = [imageWidh1, imageWidh2, imageWidh3, imageWidh4];
 export default function Electronics() {
   return (
     <>
-      <main className="px-3">
+      <HeaderMain />
+      <main id="main" className="px-3">
         <section className="flex justify-center mx-auto ">
           <div className=" xl:w-[12%] w-[20%] pe-2">
             <SideNav />
@@ -41,17 +44,17 @@ export default function Electronics() {
                 Shop by category
               </h3>
 
-              <HorizontalScroll>
-                {[...Array(16)].map((_, index) => (
-                  <ScrollHrCard
-                    imageClass="w-44 h-44 cursor-pointer border p-4 border-red-400 rounded-xl"
-                    key={index}
-                    headName={index}
-                    isHeading={true}
-
-                    //Should pass data Details for isHeading
-                  />
-                ))}
+              <HorizontalScroll containerStyles="horizontal-scroll gap-5 pt-2 pb-7 my-4">
+                <div className="flex gap-3">
+                  {brandImages.map((img, index) => (
+                    <img
+                      key={index}
+                      className="h-44 w-44 rounded-full border"
+                      src={img?.src}
+                      alt={img?.alt || "Brand image"}
+                    />
+                  ))}
+                </div>
               </HorizontalScroll>
             </div>
             {/* SLIDER */}
@@ -65,9 +68,14 @@ export default function Electronics() {
                 New Arrivals
               </h3>
 
-              <HorizontalScroll>
-                {[...Array(16)].map((_, index) => (
-                  <DetailsPriceCard key={index} customClass="h-64 w-64" />
+              <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                {dummyProductsOne.map((prod, i) => (
+                  <div key={i} className="flex-shrink-0">
+                    <DetailsPriceCard
+                      product={prod}
+                      customClass="h-44 w-22 p-5"
+                    />
+                  </div>
                 ))}
               </HorizontalScroll>
             </div>
@@ -91,9 +99,14 @@ export default function Electronics() {
                 Shop Amazon Devices
               </h3>
 
-              <HorizontalScroll>
-                {[...Array(16)].map((_, index) => (
-                  <DetailsPriceCard key={index} customClass="h-64 w-64" />
+              <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                {dummyProductsOne.map((prod, i) => (
+                  <div key={i} className="flex-shrink-0">
+                    <DetailsPriceCard
+                      product={prod}
+                      customClass="h-44 w-22 p-5"
+                    />
+                  </div>
                 ))}
               </HorizontalScroll>
             </div>
@@ -110,9 +123,14 @@ export default function Electronics() {
                 Top picks in Digital Content
               </h3>
 
-              <HorizontalScroll>
-                {[...Array(16)].map((_, index) => (
-                  <DetailsPriceCard key={index} customClass="h-64 w-64" />
+              <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                {dummyProductsOne.map((prod, i) => (
+                  <div key={i} className="flex-shrink-0">
+                    <DetailsPriceCard
+                      product={prod}
+                      customClass="h-44 w-22 p-5"
+                    />
+                  </div>
                 ))}
               </HorizontalScroll>
             </div>
@@ -122,10 +140,14 @@ export default function Electronics() {
               <h3 className="text-2xl font-semibold text-start pt-4 pb-1 border-b">
                 Explore top picks
               </h3>
-
-              <HorizontalScroll>
-                {[...Array(16)].map((_, index) => (
-                  <DetailsPriceCard key={index} customClass="h-64 w-64" />
+              <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+                {dummyProductsOne.map((prod, i) => (
+                  <div key={i} className="flex-shrink-0">
+                    <DetailsPriceCard
+                      product={prod}
+                      customClass="h-44 w-22 p-5"
+                    />
+                  </div>
                 ))}
               </HorizontalScroll>
             </div>
