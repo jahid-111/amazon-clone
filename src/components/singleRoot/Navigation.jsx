@@ -32,8 +32,8 @@ export default function Navigation() {
               key={index}
               className="relative border-[1px] h-9 w-auto rounded-sm border-transparent hover:border-white transition-all ease-in-out flex items-center"
             >
-              <Link to="/" className="block">
-                <span className="text-sm p-1">{menu}</span>
+              <Link to={menu?.route} className="block">
+                <span className="text-sm p-1">{menu?.label}</span>
               </Link>
             </li>
           ))}
