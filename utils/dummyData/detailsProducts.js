@@ -34,7 +34,7 @@ const detailsProducts = [
       original: 5699.0,
       discount: "7%",
     },
-    rating: 4.5,
+    rating: 2.5,
 
     availableSizes: ["1TB", "256GB", "512TB"],
     availableColors: ["White Titanium", "Green", "Gray", "Silver", "Black"],

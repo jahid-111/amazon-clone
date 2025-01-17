@@ -1,10 +1,3 @@
-import ProductMultiPhoto from "../../components/detailsPagePricing/ProductMultiPhoto";
-import SelectedDetails from "../../components/detailsPagePricing/SelectedDetails";
-import PriceHeading from "../../components/detailsPagePricing/PriceHeading";
-import MainPrice from "../../components/detailsPagePricing/MainPrice";
-import VariantProduct from "../../components/detailsPagePricing/VariantProduct";
-import SpecificationsProduct from "../../components/detailsPagePricing/SpecificationsProduct";
-import AboutDetailsProduct from "../../components/detailsPagePricing/AboutDetailsProduct";
 import TradingAddCart from "../../components/detailsPagePricing/TradingAddCart";
 import NonTradingCart from "../../components/detailsPagePricing/NonTradingCart";
 import ProductCoverImages from "../../components/detailsPagePricing/ProductCoverImages";
@@ -14,7 +7,6 @@ import ReviewLink from "../../components/detailsPagePricing/ratingReview/ReviewL
 import CustomerReview from "../../components/detailsPagePricing/ratingReview/CustomerReview";
 import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
-import dummyProductsOne from "../../../utils/dummyData/productListOne";
 import PriceCompare from "../../components/compareProduct/PriceCompare";
 import HeaderMain from "../../components/HeaderMain";
 import useScrollToVisible from "../../hooks/useScrollToVisible";
@@ -48,7 +40,7 @@ export default function ProductDetailsPage() {
             <div className="w-5/12 mx-2 rounded-md">
               <div className="rounded-md  border-2 ">
                 {/* TRADING */}
-                {/* <TradingAddCart /> */}
+                <TradingAddCart />
                 {/*NON TRADING */}
                 <NonTradingCart />
               </div>
@@ -58,7 +50,7 @@ export default function ProductDetailsPage() {
 
         {/* PROD DETAILS COVER IMAGE */}
         <div className="xl:mx-28 bg-red-300 m-2">
-          {/* <ProductCoverImages /> */}
+          <ProductCoverImages />
         </div>
         {/* RATINGS & REVIEW __Product */}
         <div className="flex gap-3 px-2 my-10">
@@ -68,14 +60,16 @@ export default function ProductDetailsPage() {
             <div>
               <h3 className="text-xl font-bold">Customer Reviews</h3>
 
-              {/* <RatingStar /> */}
+              <RatingStar />
             </div>
 
             {/* Rating Breakdown, it's  definition */}
-            <div>{/* <RatingsBreakdown /> */}</div>
+            <div>
+              <RatingsBreakdown />
+            </div>
 
             {/* Review Link Button */}
-            {/* <ReviewLink /> */}
+            <ReviewLink />
           </div>
 
           {/* Customer Review content */}
@@ -84,13 +78,13 @@ export default function ProductDetailsPage() {
               <h5 className="text-xl font-semibold">
                 Top reviews from Saudi Arabia
               </h5>
-              {/* <CustomerReview /> */}
+              <CustomerReview />
             </div>
           </div>
         </div>
 
         {/* Price Compare Product */}
-        {/* <PriceCompare /> */}
+        <PriceCompare />
         {/* FULL WIDTH SECTION */}
         <div className="p-4">
           {/* <h1 className="text-2xl font-bold mb-4">Horizontal Scroll Example</h1> */}

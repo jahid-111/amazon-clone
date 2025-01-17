@@ -1,5 +1,5 @@
-import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import StarCountRating from "../reUseComponents/StarCountRating";
 
 export default function PriceHeading({ product }) {
   // console.log(product);
@@ -20,10 +20,8 @@ export default function PriceHeading({ product }) {
       <div className="flex justify-between items-center mt-3">
         {/* Rating Section */}
         <div className="flex items-center gap-2">
-          {[...Array(5)].map((_, index) => (
-            <FaStar key={index} className="text-yellow-500" />
-          ))}
-          <span className="text-sm text-gray-600">({product?.rating})</span>
+          <StarCountRating rating={product?.rating} />
+          {/* <span className="text-sm text-gray-600">({product?.rating})</span> */}
         </div>
 
         {/* Separator and Search Link */}

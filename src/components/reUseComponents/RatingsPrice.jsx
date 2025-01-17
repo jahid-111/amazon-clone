@@ -1,16 +1,28 @@
-import { Link } from "react-router-dom";
+import StarCountRating from "./StarCountRating";
 
 export default function RatingsPrice({ product }) {
-  // console.log(product);
+  // console.log(product); // Debugging output
+
   return (
-    <div>
-      <p>{product?.brand}</p>
-      <Link to={"/"}>⭐️⭐️⭐️⭐️⭐️</Link>
-      <h5 className="">
-        <sup className="text-xs">SAR</sup>
-        <strong>{product?.price?.current}</strong>
+    <div className="space-y-2">
+      {/* Product Brand */}
+      <p className="text-sm font-medium text-gray-700">
+        {product?.brand || "Unknown Brand"}
+      </p>
+
+      {/* Star Rating */}
+      <StarCountRating rating={product?.rating} />
+
+      {/* Price */}
+      <h5 className="text-lg font-bold">
+        <sup className="text-xs text-gray-600">SAR</sup>
+        <strong>{product?.price?.current || "N/A"}</strong>
       </h5>
-      <p className=" text-xs font-medium">{product.marketing[4].viewIn}</p>
+
+      {/* Marketing Info */}
+      <p className="text-xs font-medium text-gray-500">
+        {product?.marketing?.[4]?.viewIn || "No additional info"}
+      </p>
     </div>
   );
 }

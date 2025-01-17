@@ -3,7 +3,6 @@ import SellPrimaryCard from "../../components/cards/SellPrimaryCard";
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
 import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import { Link } from "react-router-dom";
-// import dummyProductsOne from "../../../utils/dummyData/productListOne";
 import Footer from "../../components/Footer";
 import HeaderMain from "../../components/HeaderMain";
 import detailsProducts from "../../../utils/dummyData/detailsProducts";
