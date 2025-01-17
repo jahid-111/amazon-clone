@@ -11,7 +11,7 @@ export default function SpecificationProduct() {
 
   const [product, setProduct] = useState(data[0]);
 
-  //   console.log(data);
+  console.log(data);
   //   console.log(product);
 
   function handleSelectStorage(storage) {
@@ -36,10 +36,7 @@ export default function SpecificationProduct() {
 
       {/* PRICE */}
       <MainPrice product={product} />
-      <div className="text-xs font-semibold">
-        <p>Size 128</p>
-        <p>Style Iphone</p>
-      </div>
+
       <VariantProduct
         onSelectStorage={handleSelectStorage}
         onSelectColor={handleSelectColor}

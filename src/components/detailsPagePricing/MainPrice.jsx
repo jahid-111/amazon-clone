@@ -24,7 +24,7 @@ export default function MainPrice({ product }) {
       <div className=" text-xs font-semibold">
         <p className="flex items-center mt-2 text-gray-700">
           List Price:
-          <span className="line-through ml-1 text-gray-500">
+          <span className="deprecated-style ml-1 font-bold">
             SAR5 {product?.price?.original}
           </span>
           <FaInfo className="ml-2 border border-gray-400 rounded-full text-xs p-0.5" />
