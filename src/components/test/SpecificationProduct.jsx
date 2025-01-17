@@ -11,11 +11,11 @@ export default function SpecificationProduct() {
 
   const [product, setProduct] = useState(data[0]);
 
-  console.log(data);
+  // console.log(data);
   //   console.log(product);
 
   function handleSelectStorage(storage) {
-    // console.log(storage);
+    console.log(storage);
     const selectedStorage = data.find((product) => product.storage === storage);
     if (selectedStorage) {
       setProduct(selectedStorage);
@@ -24,7 +24,7 @@ export default function SpecificationProduct() {
   }
 
   function handleSelectColor(color) {
-    console.log(color);
+    // console.log(color);
     const selectedColor = data.find((product) => product.color === color);
     if (selectedColor) {
       setProduct(selectedColor);
