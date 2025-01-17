@@ -1,7 +1,14 @@
 export default function SpecificationsProduct({ product }) {
   const specifications = Object.keys(product)
 
-    .filter((key) => key !== "features" && key !== "price" && key !== "color")
+    .filter(
+      (key) =>
+        key !== "features" &&
+        key !== "price" &&
+        key !== "color" &&
+        key !== "photos" &&
+        key !== "marketing"
+    )
     .map((key) => {
       let value = product[key];
       if (Array.isArray(value)) {

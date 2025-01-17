@@ -3,11 +3,17 @@ import SellPrimaryCard from "../../components/cards/SellPrimaryCard";
 import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
 import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
 import { Link } from "react-router-dom";
-import dummyProductsOne from "../../../utils/dummyData/productListOne";
+// import dummyProductsOne from "../../../utils/dummyData/productListOne";
 import Footer from "../../components/Footer";
 import HeaderMain from "../../components/HeaderMain";
+import detailsProducts from "../../../utils/dummyData/detailsProducts";
 
 export default function HomePage() {
+  const product = detailsProducts;
+  // console.log(product);
+  // const { brand, rating } = product[0];
+  // console.log(brand, rating);
+
   return (
     <div>
       <section className="">
@@ -27,22 +33,22 @@ export default function HomePage() {
               {/* Cards Grid */}
               <div className="w-full  mb-4">
                 <div className="grid grid-cols-3 xl:grid-cols-4 gap-7 place-items-stretch">
-                  {[...Array(8)].map((_, card) => (
+                  {/* {[...Array(8)].map((_, card) => (
                     <SellPrimaryCard key={card} />
-                  ))}
+                  ))} */}
                 </div>
               </div>
 
               {/* Horizontal Scroll Section */}
               <div className="w-full bg-gray-100 px-2 mt-7">
                 <h3 className="text-2xl font-semibold text-start pt-4 pb-1">
-                  Top picks on children books from SAR 1
+                  Top picks on children books from SAR DEV
                 </h3>
                 <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-                  {dummyProductsOne.map((prod, i) => (
+                  {product.map((prod, i) => (
                     <div key={i} className="flex-shrink-0">
                       <DetailsPriceCard
-                        product={prod}
+                        productInfo={prod}
                         customClass="h-44 w-22 p-5"
                       />
                     </div>
@@ -53,9 +59,9 @@ export default function HomePage() {
               {/* Cards Grid */}
               <div className="w-full mb-4 mt-7">
                 <div className="grid grid-cols-3 xl:grid-cols-4 gap-7 place-items-stretch">
-                  {[...Array(4)].map((_, card) => (
+                  {/* {[...Array(4)].map((_, card) => (
                     <SellPrimaryCard key={card} />
-                  ))}
+                  ))} */}
                 </div>
               </div>
               {/* Horizontal Scroll Section */}
@@ -65,10 +71,10 @@ export default function HomePage() {
                 </h3>
 
                 <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-                  {dummyProductsOne.map((prod, i) => (
+                  {product.map((prod, i) => (
                     <div key={i} className="flex-shrink-0">
                       <DetailsPriceCard
-                        product={prod}
+                        productInfo={prod}
                         customClass="h-44 w-22 p-5"
                       />
                     </div>
@@ -91,10 +97,10 @@ export default function HomePage() {
                 </h3>
 
                 <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-                  {dummyProductsOne.map((prod, i) => (
+                  {product.map((prod, i) => (
                     <div key={i} className="flex-shrink-0">
                       <DetailsPriceCard
-                        product={prod}
+                        productInfo={prod}
                         customClass="h-44 w-22 p-5"
                       />
                     </div>
@@ -117,10 +123,10 @@ export default function HomePage() {
                 </h3>
 
                 <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-                  {dummyProductsOne.map((prod, i) => (
+                  {product.map((prod, i) => (
                     <div key={i} className="flex-shrink-0">
                       <DetailsPriceCard
-                        product={prod}
+                        productInfo={prod}
                         customClass="h-44 w-22 p-5"
                       />
                     </div>
@@ -144,10 +150,10 @@ export default function HomePage() {
                 </h3>
 
                 <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-                  {dummyProductsOne.map((prod, i) => (
+                  {product.map((prod, i) => (
                     <div key={i} className="flex-shrink-0">
                       <DetailsPriceCard
-                        product={prod}
+                        productInfo={prod}
                         customClass="h-44 w-22 p-5"
                       />
                     </div>
@@ -164,12 +170,11 @@ export default function HomePage() {
                     Inspired by your browsing history 5
                   </h6>
                   <HorizontalScroll containerStyles="gap-5 pt-2 pb-7 mb-2">
-                    {dummyProductsOne.map((prod, i) => (
+                    {product.map((prod, i) => (
                       <div key={i} className="flex-shrink-0">
                         <DetailsPriceCard
-                          product={prod}
+                          productInfo={prod}
                           customClass="h-44 w-22 p-5"
-                          // isBestSeller={true}
                         />
                       </div>
                     ))}

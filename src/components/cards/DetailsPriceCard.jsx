@@ -5,19 +5,23 @@ import PhotoOptimize from "../reUseComponents/images/PhotoOptimize";
 export default function DetailsPriceCard({
   customClass,
   isBestSeller,
-  product,
+  productInfo,
 }) {
+  // console.log(productInfo?.marketing);
   return (
     <div>
       {/* Product Image */}
-      <PhotoOptimize customClass={customClass} />
+      <PhotoOptimize
+        photo={productInfo?.photos[0]?.mainPhoto}
+        customClass={customClass}
+      />
       {/* Product Name */}
       <Link className="text-blue hover:underline">
-        <h6>{product?.name}</h6>
+        <h6>{productInfo?.name}</h6>
       </Link>
 
       {/* Ratings and Price Component */}
-      <RatingsPrice product={product} />
+      <RatingsPrice product={productInfo} />
 
       {/* Polygon Badge */}
       {isBestSeller && (

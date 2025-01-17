@@ -4,13 +4,13 @@ export default function RatingsPrice({ product }) {
   // console.log(product);
   return (
     <div>
-      <p>brand</p>
+      <p>{product?.brand}</p>
       <Link to={"/"}>⭐️⭐️⭐️⭐️⭐️</Link>
       <h5 className="">
         <sup className="text-xs">SAR</sup>
-        <strong>{product?.price}</strong>
+        <strong>{product?.price?.current}</strong>
       </h5>
-      <p className=" text-xs font-medium">100+ viewed last time</p>
+      <p className=" text-xs font-medium">{product.marketing[4].viewIn}</p>
     </div>
   );
 }

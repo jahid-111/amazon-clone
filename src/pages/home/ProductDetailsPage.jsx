@@ -21,9 +21,11 @@ import useScrollToVisible from "../../hooks/useScrollToVisible";
 import Footer from "../../components/Footer";
 import ProductViewer from "../../components/detailsPagePricing/ProductViewer";
 import SpecificationProduct from "../../components/test/SpecificationProduct";
+import detailsProducts from "../../../utils/dummyData/detailsProducts";
 
 export default function ProductDetailsPage() {
   const { isVisible } = useScrollToVisible();
+  const product = detailsProducts;
 
   return (
     <>
@@ -46,7 +48,7 @@ export default function ProductDetailsPage() {
             <div className="w-5/12 mx-2 rounded-md">
               <div className="rounded-md  border-2 ">
                 {/* TRADING */}
-                <TradingAddCart />
+                {/* <TradingAddCart /> */}
                 {/*NON TRADING */}
                 <NonTradingCart />
               </div>
@@ -56,7 +58,7 @@ export default function ProductDetailsPage() {
 
         {/* PROD DETAILS COVER IMAGE */}
         <div className="xl:mx-28 bg-red-300 m-2">
-          <ProductCoverImages />
+          {/* <ProductCoverImages /> */}
         </div>
         {/* RATINGS & REVIEW __Product */}
         <div className="flex gap-3 px-2 my-10">
@@ -66,16 +68,14 @@ export default function ProductDetailsPage() {
             <div>
               <h3 className="text-xl font-bold">Customer Reviews</h3>
 
-              <RatingStar />
+              {/* <RatingStar /> */}
             </div>
 
             {/* Rating Breakdown, it's  definition */}
-            <div>
-              <RatingsBreakdown />
-            </div>
+            <div>{/* <RatingsBreakdown /> */}</div>
 
             {/* Review Link Button */}
-            <ReviewLink />
+            {/* <ReviewLink /> */}
           </div>
 
           {/* Customer Review content */}
@@ -84,13 +84,13 @@ export default function ProductDetailsPage() {
               <h5 className="text-xl font-semibold">
                 Top reviews from Saudi Arabia
               </h5>
-              <CustomerReview />
+              {/* <CustomerReview /> */}
             </div>
           </div>
         </div>
 
         {/* Price Compare Product */}
-        <PriceCompare />
+        {/* <PriceCompare /> */}
         {/* FULL WIDTH SECTION */}
         <div className="p-4">
           {/* <h1 className="text-2xl font-bold mb-4">Horizontal Scroll Example</h1> */}
@@ -98,7 +98,7 @@ export default function ProductDetailsPage() {
             <h5 className="font-semibold text-gray-500">
               Related to items you have viewed
             </h5>
-            <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+            {/* <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
               {dummyProductsOne.map((prod, i) => (
                 <div key={i} className="flex-shrink-0">
                   <DetailsPriceCard
@@ -107,16 +107,19 @@ export default function ProductDetailsPage() {
                   />
                 </div>
               ))}
-            </HorizontalScroll>
+            </HorizontalScroll> */}
           </div>
           <div className=" my-3">
             <h5 className="font-semibold text-gray-500">
               More items to consider
             </h5>
             <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
-              {[...Array(20)].map((_, i) => (
+              {product.map((prod, i) => (
                 <div key={i} className="flex-shrink-0">
-                  <DetailsPriceCard customClass="h-44 w-22 p-5" />
+                  <DetailsPriceCard
+                    productInfo={prod}
+                    customClass="h-44 w-22 p-5"
+                  />
                 </div>
               ))}
             </HorizontalScroll>

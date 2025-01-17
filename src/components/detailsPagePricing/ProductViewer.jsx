@@ -26,7 +26,7 @@ export default function ProductViewer() {
               img={img}
               id={id}
               onViewPhoto={handleClickToView}
-              isSelected={selectedPhoto.index === id}
+              isSelected={selectedPhoto?.index === id}
             />
           ))}
         </div>
@@ -35,7 +35,7 @@ export default function ProductViewer() {
       {/* SELECTED PHOTO */}
       <div className="w-11/12 mx-auto">
         {/* Pass selected photo details to SelectedDetails */}
-        <SelectedDetails photo={selectedPhoto.photo} />
+        <SelectedDetails photo={selectedPhoto?.photo} />
       </div>
     </>
   );
