@@ -2,7 +2,7 @@ import { FaRegStarHalf } from "react-icons/fa";
 import { IoIosStarOutline } from "react-icons/io";
 
 const menuItems = [
-  { label: "All", route: "/" },
+  { label: "Home", route: "/" },
   { label: "Today's Deals", route: "/todays-deals" },
   { label: "Prime", route: "/prime" },
   { label: "Electronics", route: "/electronics" },

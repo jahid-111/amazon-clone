@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import ProdDetailsDisplayCard from "../../components/cards/ProdDetailsDisplayCard";
-import InputRadio from "../../components/radioSelect/InputRadio";
-import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll";
-import DetailsPriceCard from "../../components/cards/DetailsPriceCard";
-import Footer from "../../components/Footer";
-import dummyProductsOne from "../../../utils/dummyData/productListOne";
+import ProdDetailsDisplayCard from "../../components/cards/ProdDetailsDisplayCard.jsx";
+import InputRadio from "../../components/radioSelect/InputRadio.jsx";
+import HorizontalScroll from "../../components/reUseComponents/HorizontalScroll.jsx";
+import DetailsPriceCard from "../../components/cards/DetailsPriceCard.jsx";
+import Footer from "../../components/Footer.jsx";
+import dummyProductsOne from "../../../utils/dummyData/productListOne.js";
 import brandImage from "../../../utils/imageExports.js";
 import HeaderMain from "../../components/HeaderMain.jsx";
-export default function TodaysDeals() {
+export default function TodaysDealsPage() {
   return (
     <div className="">
       <HeaderMain />

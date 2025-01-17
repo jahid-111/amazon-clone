@@ -26,7 +26,7 @@ import HeaderMain from "../../components/HeaderMain";
 import dummyProductsOne from "../../../utils/dummyData/productListOne";
 const slides = [imageOne, imageTwo, imageThree, imageFour];
 const witdhImge = [imageWidh1, imageWidh2, imageWidh3, imageWidh4];
-export default function Electronics() {
+export default function ElectronicPage() {
   return (
     <>
       <HeaderMain />

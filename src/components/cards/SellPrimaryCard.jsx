@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function SellPrimaryCard() {
   return (
     <div className="w-auto max-w-[21rem] h-[26rem] p-2 relative bg-gray-100 shadow-md rounded-sm">
@@ -17,7 +19,10 @@ export default function SellPrimaryCard() {
 
       {/* Button */}
       <div className="absolute bottom-6 left-0">
-        <button className="sell-primary-button">Shop all</button>
+        <Link to="product/id" className="sell-primary-button">
+          Shop all
+        </Link>
+        {/* <button className=""></button> */}
       </div>
     </div>
   );

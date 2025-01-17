@@ -19,6 +19,7 @@ import PriceCompare from "../../components/compareProduct/PriceCompare";
 import HeaderMain from "../../components/HeaderMain";
 import useScrollToVisible from "../../hooks/useScrollToVisible";
 import Footer from "../../components/Footer";
+import ProductViewer from "../../components/detailsPagePricing/ProductViewer";
 
 export default function ProductDetailsPage() {
   const { isVisible } = useScrollToVisible();
@@ -28,21 +29,10 @@ export default function ProductDetailsPage() {
     <>
       {isVisible && <HeaderMain />}
       <main id="main" className="my-3">
-        <div className=" flex justify-between xl:px-28 px-2 mx-auto mt-24 pt-10">
+        <div className=" flex justify-between xl:px-28  mt-28">
           {/* PHOTO INTRODUCE */}
-          <div className="flex justify-center w-5/12">
-            {/* MULTI PHOTO DISPLAY */}
-            <div className="mx-auto w-1/12">
-              <ProductMultiPhoto />
-            </div>
-            {/* SELECTED PHOTO */}
-
-            <div className=" w-11/12">
-              {/* Selected Details */}
-              <SelectedDetails />
-
-              {/* Invisible by default, visible on hover */}
-            </div>
+          <div className="flex justify-center h-screen w-5/12">
+            <ProductViewer />
           </div>
 
           {/* DETAILS AND ORDER CART */}

@@ -6,9 +6,7 @@ import SideNavigation from "./SideNavigation";
 import { useFilteredNavItems } from "../../hooks/useFilteredNavItem";
 
 export default function Navigation() {
-  const filteredMenuItems = useFilteredNavItems(menuItems).filter(
-    (menu) => menu !== "All" // Remove "All" from menu items
-  );
+  const filteredMenuItems = useFilteredNavItems(menuItems);
   const [openSideNav, setOpenSideNav] = useState(false);
 
   return (
