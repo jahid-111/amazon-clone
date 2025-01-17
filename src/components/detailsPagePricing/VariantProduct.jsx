@@ -1,4 +1,9 @@
-export default function VariantProduct() {
+export default function VariantProduct({
+  allProduct,
+  onSelectStorage,
+  onSelectColor,
+}) {
+  // console.log(allProduct);
   return (
     <div>
       <div className=" flex items-center gap-2 text-xs mt-2">
@@ -6,15 +11,16 @@ export default function VariantProduct() {
         <strong> 1 TB</strong>
       </div>
       <div className="flex gap-3 mt-2">
-        <button className=" border-2 hover:bg-gray-100 hover:border-blue px-2  py-1 rounded-lg">
-          1TB
-        </button>
-        <button className=" border-2 hover:bg-gray-100 hover:border-blue px-2  py-1 rounded-lg">
-          256GB
-        </button>
-        <button className=" border-2 hover:bg-gray-100 hover:border-blue px-2  py-1 rounded-lg">
-          512TB
-        </button>
+        {allProduct.map((storage) => (
+          // console.log(storage),
+          <button
+            onClick={() => onSelectStorage(storage.storage)}
+            key={storage?.storage}
+            className=" border-2 hover:bg-gray-100 hover:border-blue px-2  py-1 rounded-lg"
+          >
+            {storage.storage}
+          </button>
+        ))}
       </div>
 
       {/* COLOR */}
@@ -23,21 +29,23 @@ export default function VariantProduct() {
         <strong> White Titanium </strong>
       </div>
       <div className=" flex justify-start items-center gap-2 mt-2">
-        <div className=" border rounded-md">
-          <div className=" h-8 w-8 bg-green-400 rounded-full"></div>
-        </div>
-
-        <div className=" border rounded-md">
-          <div className=" h-8 w-8 bg-gray-400 rounded-full"></div>
-        </div>
-
-        <div className=" border rounded-md">
-          <div className=" h-8 w-8 bg-white rounded-full"></div>
-        </div>
-
-        <div className=" border rounded-md">
-          <div className=" h-8 w-8 bg-black rounded-full"></div>
-        </div>
+        {allProduct?.map(
+          (color) => (
+            console.log(color.color),
+            (
+              <button
+                onClick={() => onSelectColor(color?.color)}
+                key={color?.colour}
+                className=" border rounded-md"
+              >
+                <div
+                  style={{ backgroundColor: color?.color }}
+                  className="h-8 w-8 bg-green-400 rounded-full"
+                ></div>
+              </button>
+            )
+          )
+        )}
       </div>
     </div>
   );

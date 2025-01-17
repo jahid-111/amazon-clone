@@ -1,13 +1,12 @@
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function PriceHeading() {
+export default function PriceHeading({ product }) {
+  // console.log(product);
   return (
     <div className="pb-2 border-b">
       {/* Product Title */}
-      <h1 className="text-2xl font-semibold">
-        Apple iPhone 16 Pro Max (256 GB) - Black Titanium
-      </h1>
+      <h1 className="text-2xl font-semibold">{product?.name}</h1>
 
       {/* Brand Link */}
       <p className="">
@@ -24,7 +23,7 @@ export default function PriceHeading() {
           {[...Array(5)].map((_, index) => (
             <FaStar key={index} className="text-yellow-500" />
           ))}
-          <span className="text-sm text-gray-600">(4.5)</span>
+          <span className="text-sm text-gray-600">({product?.rating})</span>
         </div>
 
         {/* Separator and Search Link */}

@@ -7,7 +7,7 @@ export default function ProductMultiPhoto({
   return (
     <div
       onMouseEnter={() => onViewPhoto(id)}
-      className={`border border-gray-300 hover:border-4 rounded-md py-1 transition-all duration-200 ease-in cursor-pointer 
+      className={`border border-blue hover:border-4 rounded-md py-1 transition-all duration-200 ease-in cursor-pointer 
                   ${isSelected ? "border-4 border-blue" : ""}`}
     >
       <img
