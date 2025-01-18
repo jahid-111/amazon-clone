@@ -6,50 +6,61 @@ import PriceHeading from "../detailsPagePricing/PriceHeading";
 import SpecificationsProduct from "../detailsPagePricing/SpecificationsProduct";
 import VariantProduct from "../detailsPagePricing/VariantProduct";
 
-export default function SpecificationProduct() {
+export default function SpecificationProduct({
+  allProduct,
+  test,
+  onLoadProduct,
+}) {
+  // console.log(test.current?.photos[1]?.allPhotos[1]);
+
   const data = detailsProducts;
 
-  const [product, setProduct] = useState(data[0]);
-
-  // console.log(data);
-  //   console.log(product);
+  const [product, setProduct] = useState(test);
 
   function handleSelectStorage(storage) {
-    console.log(storage);
-    const selectedStorage = data.find((product) => product.storage === storage);
+    // Find the selected product based on the storage
+    const selectedStorage = allProduct.find(
+      (product) => product.storage === storage
+    );
+    // console.log(selectedStorage);
+
     if (selectedStorage) {
-      setProduct(selectedStorage);
+      // Pass the selectedStorage as the new 'current' product to onLoadProduct
+      console.log(selectedStorage?.photos);
+      onLoadProduct({
+        current: selectedStorage,
+        photo: selectedStorage?.photos,
+      });
     }
-    // console.log(selectedProduct);
   }
 
   function handleSelectColor(color) {
-    // console.log(color);
-    const selectedColor = data.find((product) => product.color === color);
+    console.log(color);
+    const selectedColor = product.find((product) => product.color === color);
     if (selectedColor) {
       setProduct(selectedColor);
     }
   }
   return (
     <>
-      <PriceHeading product={product} />
+      <PriceHeading product={test.current} />
 
       {/* PRICE */}
-      <MainPrice product={product} />
+      <MainPrice product={test.current} />
 
       <VariantProduct
         onSelectStorage={handleSelectStorage}
         onSelectColor={handleSelectColor}
-        product={product}
+        product={test}
         allProduct={data}
       />
 
       {/* Specification */}
 
-      <SpecificationsProduct product={product} />
+      <SpecificationsProduct product={test.current} />
       {/* ABOUT ITEMS */}
       <div className=" mt-5">
-        <AboutDetailsProduct product={product} />
+        <AboutDetailsProduct product={test.current} />
       </div>
       {/* Product SELLER image   */}
       <div>

@@ -1,5 +1,6 @@
 export default function AboutDetailsProduct({ product }) {
   // console.log(product);
+
   return (
     <div>
       <h5 className=" text-pretty font-semibold text-black">About this item</h5>

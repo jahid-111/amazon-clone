@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import HeaderMain from "../../components/HeaderMain";
 import detailsProducts from "../../../utils/dummyData/detailsProducts";
+import allProducts from "../../../utils/dummyData/allProducts";
 
 export default function HomePage() {
-  const product = detailsProducts;
+  const product = allProducts;
   // console.log(product);
   // const { brand, rating } = product[0];
   // console.log(brand, rating);
@@ -32,9 +33,9 @@ export default function HomePage() {
               {/* Cards Grid */}
               <div className="w-full  mb-4">
                 <div className="grid grid-cols-3 xl:grid-cols-4 gap-7 place-items-stretch">
-                  {/* {[...Array(8)].map((_, card) => (
+                  {[...Array(8)].map((_, card) => (
                     <SellPrimaryCard key={card} />
-                  ))} */}
+                  ))}
                 </div>
               </div>
 
@@ -58,9 +59,9 @@ export default function HomePage() {
               {/* Cards Grid */}
               <div className="w-full mb-4 mt-7">
                 <div className="grid grid-cols-3 xl:grid-cols-4 gap-7 place-items-stretch">
-                  {/* {[...Array(4)].map((_, card) => (
+                  {[...Array(4)].map((_, card) => (
                     <SellPrimaryCard key={card} />
-                  ))} */}
+                  ))}
                 </div>
               </div>
               {/* Horizontal Scroll Section */}

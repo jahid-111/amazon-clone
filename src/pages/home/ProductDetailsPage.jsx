@@ -14,10 +14,18 @@ import Footer from "../../components/Footer";
 import ProductViewer from "../../components/detailsPagePricing/ProductViewer";
 import SpecificationProduct from "../../components/test/SpecificationProduct";
 import detailsProducts from "../../../utils/dummyData/detailsProducts";
+import { useState } from "react";
 
 export default function ProductDetailsPage() {
   const { isVisible } = useScrollToVisible();
+
   const product = detailsProducts;
+  const [data, setData] = useState({
+    current: product[0],
+    photo: product[0].photos[1].allPhotos,
+    index: 0,
+  });
+  console.log(product[0].photos[1]);
 
   return (
     <>
@@ -26,14 +34,18 @@ export default function ProductDetailsPage() {
         <div className=" flex justify-between xl:px-28  mt-28">
           {/* PHOTO INTRODUCE */}
           <div className="flex justify-center h-screen w-5/12">
-            <ProductViewer />
+            <ProductViewer product={data?.current} />
           </div>
 
           {/* DETAILS AND ORDER CART */}
           <div className="flex mx-auto w-7/12">
             {/* HEADING */}
             <div className="mx-auto  w-7/12">
-              <SpecificationProduct />
+              <SpecificationProduct
+                allProduct={product}
+                test={data}
+                onLoadProduct={setData}
+              />
             </div>
 
             {/* PRICING BY TRADE */}
@@ -107,7 +119,7 @@ export default function ProductDetailsPage() {
             <h5 className="font-semibold text-gray-500">
               More items to consider
             </h5>
-            <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
+            {/* <HorizontalScroll containerStyles="gap-5 pt-2 pb-7">
               {product.map((prod, i) => (
                 <div key={i} className="flex-shrink-0">
                   <DetailsPriceCard
@@ -116,7 +128,7 @@ export default function ProductDetailsPage() {
                   />
                 </div>
               ))}
-            </HorizontalScroll>
+            </HorizontalScroll> */}
           </div>
         </div>
       </main>
