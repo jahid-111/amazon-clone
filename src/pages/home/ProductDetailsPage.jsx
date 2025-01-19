@@ -25,7 +25,7 @@ export default function ProductDetailsPage() {
     photo: product[0].photos[1].allPhotos,
     index: 0,
   });
-  console.log(product[0].photos[1]);
+  // console.log(product[0].photos[1]);
 
   return (
     <>

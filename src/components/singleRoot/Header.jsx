@@ -3,8 +3,11 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { MdOutlinePlace } from "react-icons/md";
 import SearchBar from "./SearchBar";
 import Language from "./Language";
+import useCart from "../../hooks/hook_context/useCart";
 
 export default function Header() {
+  const { cartItems } = useCart();
+  // console.log(cartItems);
   return (
     <header className="bg-firstClass  text-gray-200 flex justify-between items-center gap-1 px-4 h-14 min-w-[930px] max-w-full">
       {/* LOGO */}
@@ -61,7 +64,7 @@ export default function Header() {
           <BsCart className="h-12 w-12" />
           <h6 className="font-bold text-xs mt-6">Cart</h6>
           <span className="text-orange-400 font-semibold text-xs absolute left-[15px] bottom-[18px]">
-            99+
+            {cartItems.length > 99 ? "99+" : cartItems.length}
           </span>
         </button>
       </div>

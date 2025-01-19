@@ -2,6 +2,7 @@ import { prodShipping } from "../../../utils/phoneStaticData";
 import { Link } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
+import CartAdd from "../reUseComponents/CartAdd";
 
 export default function NonTradingCart() {
   return (
@@ -76,9 +77,7 @@ export default function NonTradingCart() {
               </select>
             </div>
             {/* Add to Cart Button - Orange */}
-            <button className="bg-[#fac942] text-gray-800 font-medium rounded-full py-2 text-xs px-10 transition-colors">
-              Add To Cart
-            </button>
+            <CartAdd />
 
             {/* Add to Cart Button - Yellow */}
             <button className="bg-[#f89f3a] text-gray-800 font-medium rounded-full py-2 text-xs px-10 hover:bg-yellow-500 transition-colors">

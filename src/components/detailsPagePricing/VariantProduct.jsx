@@ -4,7 +4,7 @@ export default function VariantProduct({
   onSelectStorage,
   onSelectColor,
 }) {
-  console.log(product?.current?.color);
+  // console.log(product?.current?.color);
 
   return (
     <div>
