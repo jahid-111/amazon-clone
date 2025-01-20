@@ -7,15 +7,30 @@ import CartAdd from "../reUseComponents/CartAdd";
 export default function NonTradingCart({ title, children, isActive, onShow }) {
   // console.log(title, children, isActive, onShow);
   return (
-    <div className="hover:bg-gray-300 p-2 cursor-pointer">
+    <div
+      className={`${
+        !isActive && " hover:bg-slate-200"
+      } border-b p-2 cursor-pointer`}
+    >
       <div onClick={onShow}>
         <div className=" flex justify-between items-center">
-          <h6 className="font-semibold text-sm">With Trade-in</h6>
-          <input type="radio" />
+          <h6 className="font-semibold text-sm">Without Trade-in</h6>
+          <input
+            type="radio"
+            checked={isActive} // Fill (check) the radio button if isActive is true
+            onChange={onShow} // Toggle the state when clicked
+            className="border-gray-400" // Custom styling for the radio
+          />
         </div>
 
-        <p className="text-start text-sm font-bold">
-          <span className="text-red-800">SAR 1974.00</span>{" "}
+        <p
+          className={`${
+            isActive
+              ? "text-start text-sm font-bold text-red-800"
+              : "text-start font-medium text-red-800"
+          }`}
+        >
+          <span className="text-red-800">SAR 1974.00</span>
           <span className="deprecated-style">SAR 2,599.00</span>
         </p>
       </div>

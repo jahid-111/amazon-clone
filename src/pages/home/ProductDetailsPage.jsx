@@ -52,7 +52,7 @@ export default function ProductDetailsPage() {
             {/* PRICING BY TRADE */}
             <div className="  w-5/12 mx-2 rounded-md">
               <div className="rounded-md  border-2 ">
-                <div className="hover:bg-gray-300">
+                <div className="">
                   <TradingAddCart
                     title="Etymology"
                     isActive={activeIndex === 0}
@@ -60,7 +60,7 @@ export default function ProductDetailsPage() {
                   />
                 </div>
 
-                <div className="hover:bg-gray-300">
+                <div className="">
                   <NonTradingCart
                     title="Etymology"
                     isActive={activeIndex === 1}
