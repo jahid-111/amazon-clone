@@ -25,8 +25,9 @@ export default function ProductDetailsPage() {
     photo: product[0].photos[1].allPhotos,
     index: 0,
   });
-  // console.log(product[0].photos[1]);
 
+  const [activeIndex, setActiveIndex] = useState(1);
+  // console.log(activeIndex);
   return (
     <>
       {isVisible && <HeaderMain />}
@@ -49,12 +50,23 @@ export default function ProductDetailsPage() {
             </div>
 
             {/* PRICING BY TRADE */}
-            <div className="w-5/12 mx-2 rounded-md">
+            <div className="  w-5/12 mx-2 rounded-md">
               <div className="rounded-md  border-2 ">
-                {/* TRADING */}
-                <TradingAddCart />
-                {/*NON TRADING */}
-                <NonTradingCart />
+                <div className="hover:bg-gray-300">
+                  <TradingAddCart
+                    title="Etymology"
+                    isActive={activeIndex === 0}
+                    onShow={() => setActiveIndex(0)}
+                  />
+                </div>
+
+                <div className="hover:bg-gray-300">
+                  <NonTradingCart
+                    title="Etymology"
+                    isActive={activeIndex === 1}
+                    onShow={() => setActiveIndex(1)}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -66,21 +78,13 @@ export default function ProductDetailsPage() {
         </div>
         {/* RATINGS & REVIEW __Product */}
         <div className="flex gap-3 px-2 my-10">
-          {/* Ratings Distribution */}
           <div className="xl:w-4/12 xl:px-32 h-auto">
-            {/* the Product Rating Star */}
-            <div>
-              <h3 className="text-xl font-bold">Customer Reviews</h3>
+            <h3 className="text-xl font-bold">Customer Reviews</h3>
 
-              <RatingStar />
-            </div>
+            <RatingStar />
 
-            {/* Rating Breakdown, it's  definition */}
-            <div>
-              <RatingsBreakdown />
-            </div>
+            <RatingsBreakdown />
 
-            {/* Review Link Button */}
             <ReviewLink />
           </div>
 
